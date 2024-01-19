@@ -1,16 +1,13 @@
-export type Permission = ''
-
 export type User = {
-  id: number
-  createdAt: string
-  login: string
-  email: string
-  avatar: string
-  displayName: string
-
+  id: string
+  tgId: number
+  username: string
+  avatarURL: string
   balance: number
-  role: number
-  discord: string
-  twofactor: boolean
-  mode: string
+
+  telegram: string
+  instagram: string
+  description: string
 }
+
+export type PublicUser = Pick<User, 'id' | 'tgId' | 'username' | 'avatarURL'>

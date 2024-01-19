@@ -9,9 +9,11 @@
       </div>
     </div>
     <div :class="$style.end">
-      <UIButton uppercase fill>
-        Начать использовать
-      </UIButton>
+      <NuxtLink to="/market">
+        <UIButton uppercase fill>
+          Начать использовать
+        </UIButton>
+      </NuxtLink>
     </div>
   </div>
 </template>

@@ -5,7 +5,10 @@
         <div :class="$style.name">
           NoMore4Shop
         </div>
-        <span :class="$style.subtitle">
+        <span
+          v-if="$route.path !== '/market'"
+          :class="$style.subtitle"
+        >
           / Перейти в каталог
         </span>
       </div>
