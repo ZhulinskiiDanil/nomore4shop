@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="data.link">
+  <NuxtLink :to="data.link" target="_blank">
     <div :class="$style.container">
       <div :class="$style.title">
         {{ data.title }}
