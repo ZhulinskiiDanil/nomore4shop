@@ -10,7 +10,7 @@
     </div>
     <div :class="$style.end">
       <UIButton uppercase fill>
-        Продолжить
+        Начать использовать
       </UIButton>
     </div>
   </div>
