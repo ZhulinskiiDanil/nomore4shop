@@ -24,10 +24,10 @@ $bgColor: $dark;
 // Components
 $buttonDefaultBg: $dark20;
 $buttonDefaultText: $yellow20;
-$buttonDefaultBgHover: $dark20;
+$buttonDefaultBgHover: rgb(43, 42, 40);
 $buttonDefaultTextHover: $yellow20;
 $buttonDefaultDisabledBg: $dark20;
-$buttonDefaultDisabledText: $yellow20;
+$buttonDefaultDisabledText: $yellow10;
 
 $buttonStrokedStrokeColor: $yellow20;
 $buttonStrokedBg: transparent;
