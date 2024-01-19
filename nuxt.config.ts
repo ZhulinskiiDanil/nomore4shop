@@ -12,8 +12,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseUrl: process.env.VITE_API_URL,
-      NOTSKIP_VK_BOT_URL: process.env.NOTSKIP_VK_BOT_URL,
-      NOTSKIP_TG_BOT_URL: process.env.NOTSKIP_TG_BOT_URL
+      VITE_TG_BOT_LINK: process.env.VITE_TG_BOT_LINK,
+      VITE_TG_CHAT_LINK: process.env.VITE_TG_CHAT_LINK,
+      VITE_TG_CHANNEL_LINK: process.env.VITE_TG_CHANNEL_LINK
     }
   },
   srcDir: './src/',

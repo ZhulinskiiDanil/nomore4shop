@@ -1,9 +1,14 @@
 <template>
-  <MarketProduct
-    v-for="product of products"
+  <div
+    v-for="product, index of products"
     :key="product.id"
-    :data="product"
-  />
+  >
+    <MarketProductAdvertising
+      v-if="index % 3 === 0"
+      type='channel'
+    />
+    <MarketProduct :data="product" />
+  </div>
 </template>
 
 <script setup lang="ts">

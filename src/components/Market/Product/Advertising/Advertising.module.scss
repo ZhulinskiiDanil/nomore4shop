@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  border-bottom: 1px solid $dark10;
+  background: $dark;
+
+  .title {
+    color: $yellow20;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: 140%;
+  }
+}
