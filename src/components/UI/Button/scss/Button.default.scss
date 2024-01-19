@@ -1,0 +1,65 @@
+button.button.default {
+  $color: $buttonDefaultText;
+  
+  color: $color;
+  background: $buttonDefaultBg;
+
+  .icon {
+    &[stroke]:not([stroke~=none]) { stroke: $color; }
+    &[fill]:not([fill~=none]) { fill: $color; }
+  }
+
+  &:hover,
+  &.hovered {
+    $color: $buttonDefaultTextHover;
+    
+    color: $color;
+    background: $buttonDefaultBgHover;
+
+    .icon {
+      &[stroke]:not([stroke~=none]) { stroke: $color; }
+      &[fill]:not([fill~=none]) { fill: $color; }
+    }
+  }
+
+  &:focus,
+  &.focused {
+    $color: $buttonDefaultTextHover;
+    
+    color: $color;
+    background: $buttonDefaultBgHover;
+
+  .icon {
+    &[stroke]:not([stroke~=none]) { stroke: $color; }
+    &[fill]:not([fill~=none]) { fill: $color; }
+  }
+  }
+
+  &:active,
+  &.pressed {
+    $color: $buttonDefaultTextHover;
+    
+    color: $color;
+    background: $buttonDefaultBgHover;
+
+  .icon {
+    &[stroke]:not([stroke~=none]) { stroke: $color; }
+    &[fill]:not([fill~=none]) { fill: $color; }
+  }
+  }
+  
+  &:disabled,
+  &.disabled,
+  &[data-disabled] {
+    $color: $buttonDefaultDisabledText;
+    
+    border: none;
+    color: $color;
+    background: $buttonDefaultDisabledBg;
+  
+    .icon {
+      &[stroke]:not([stroke~=none]) { stroke: $color; }
+      &[fill]:not([fill~=none]) { fill: $color; }
+    }
+  }
+}

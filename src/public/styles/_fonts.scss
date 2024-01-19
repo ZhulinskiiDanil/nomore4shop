@@ -1,0 +1,40 @@
+@import url('/fonts/Helvetica/index.css');
+@import url('/fonts/Akrobat/index.css');
+@import url('https://fonts.cdnfonts.com/css/roboto-flex');
+
+@font-face {
+	src: url('/fonts/RobotoFlex/RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].woff2') format('woff2-variations');
+	font-family:'Roboto Flex';
+	font-style: normal;
+}
+
+@font-face {
+  src: url('/fonts/Golos-UI/Golos-UI_Regular.ttf');
+  font-family: 'Golos UI';
+  font-weight: 400;
+}
+@font-face {
+  src: url('/fonts/Golos-UI/Golos-UI_Medium.ttf');
+  font-family: 'Golos UI';
+  font-weight: 500;
+}
+@font-face {
+  src: url('/fonts/Golos-UI/Golos-UI_Bold.ttf');
+  font-family: 'Golos UI';
+  font-weight: 600;
+}
+
+@font-face {
+  src: url('/fonts/Akrobat/Akrobat.ttf');
+  font-family: 'Akrobat';
+}
+
+@font-face {
+  src: url('/fonts/Manrope/Manrope.ttf');
+  font-family: 'Manrope';
+}
+
+@font-face {
+  src: url('/fonts/Inter/Inter.ttf');
+  font-family: 'Inter';
+}

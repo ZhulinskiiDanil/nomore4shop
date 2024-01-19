@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  background: linear-gradient(
+    to top, $dark10 0%, $dark 100%
+  );
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .37rem;
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+
+    .title {
+      color: $light;
+      text-align: center;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      font-stretch: 150%;
+    }
+
+    .subtitle {
+      max-width: 350px;
+      
+      color: $light;
+      text-align: center;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      font-stretch: 120%;
+
+      [data-accent] {
+        color: $yellow20;
+      }
+    }
+
+    .end {
+      padding: 1rem;
+    }
+  }
+
+  .end {
+    margin-top: auto;
+    padding: 1rem;
+  }
+}

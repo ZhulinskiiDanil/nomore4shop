@@ -1,0 +1,28 @@
+.textarea {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  padding: 15px 20px;
+
+  border-radius: 1rem;
+
+  &.light {
+    background: rgb($bg);
+    color: #000;
+
+    &.white {
+      background: #fff;
+    }
+  }
+
+  &.dark {
+    background: rgb($bgColor);
+    color: #fff;
+  }
+
+  &:disabled,
+  &:read-only {
+    cursor: default;
+  }
+}
