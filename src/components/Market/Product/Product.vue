@@ -1,7 +1,9 @@
 <template>
   <div :class="$style.product">
     <MarketProductHead :data="data" />
-    <MarketProductPhotos :data="data" />
+    <NuxtLink :to="`/market/${data.id}`">
+      <MarketProductPhotos :data="data" />
+    </NuxtLink>
     <div :class="$style.content">
       <div :class="$style.title">
         {{ data.title }}

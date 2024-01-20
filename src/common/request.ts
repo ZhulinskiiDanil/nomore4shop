@@ -8,21 +8,21 @@ export const request = async <T = any>(
   url: string,
   ...args: FilterFirstElement<Parameters<typeof $fetch>>
 ): Promise<T | null> => {
-  const urlWithBase = baseUrl + (url.startsWith("/") ? url : `/${url}`)
   const options: typeof args[0] = args[0] || {}
   const token = useCookie('token')
 
+  options.baseURL = baseUrl
   options.ignoreResponseError = true
   options.headers = options.headers || {}
   options.headers = {
     "Accept": "application/json",
     "Content-Type": "application/json",
-    "Authorization": `Bearer ${token.value}`
+    "tg-init-data": token.value || 'null'
   }
 
   try {
     return new Promise(res => {
-      $fetch(urlWithBase, options)
+      $fetch(url, options)
         .then(data => res(data as T))
         .catch(_ => res(null))
     })
