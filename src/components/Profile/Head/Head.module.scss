@@ -1,0 +1,50 @@
+.head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+
+  border-bottom: 1px solid $dark20;
+
+  .avatar {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .title {
+    color: $light;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: 150%;
+    margin-top: .75rem;
+  }
+
+  .username {
+    color: $yellow20;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: 150%;
+    margin-top: .25rem;
+  }
+
+  .description {
+    color: $light5;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-top: .25rem;
+  }
+}

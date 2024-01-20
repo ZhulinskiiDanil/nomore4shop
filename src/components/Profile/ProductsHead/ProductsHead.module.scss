@@ -1,0 +1,18 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+
+  border-bottom: 1px solid $dark20;
+  background: var(--dark10, $dark10);
+  
+  .title {
+    color: $light;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: 150%;
+    line-height: normal;
+  }
+}

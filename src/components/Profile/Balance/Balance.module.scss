@@ -1,0 +1,24 @@
+.balance {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  
+  border-bottom: 1px solid $dark20;
+
+  .value {
+    color: $yellow15;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-stretch: 150%;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
