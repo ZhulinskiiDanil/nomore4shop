@@ -1,0 +1,33 @@
+.socials {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  
+  background: $dark20;
+
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 100%;
+
+    .name {
+      color: $light;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .value {
+      color: $light10;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-top: 0.38rem;
+    }
+  }
+}

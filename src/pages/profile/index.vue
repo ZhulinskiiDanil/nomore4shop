@@ -2,6 +2,7 @@
   <div :class="$style.container">
     <ProfileHead />
     <ProfileBalance />
+    <ProfileSocials />
     <ProfileProductsHead />
     <div :class="$style.list">
       <MarketProduct

@@ -3,14 +3,14 @@
     <div :class="$style.value">
       450.0000 USDT
     </div>
-    <div :class="$style.buttons">
-      <!-- <UIButton fill uppercase>
+    <!-- <div :class="$style.buttons">
+      <UIButton fill uppercase>
         Пополнить
       </UIButton>
       <UIButton fill uppercase>
         Вывести
-      </UIButton> -->
-    </div>
+      </UIButton>
+    </div> -->
   </div>
 </template>
 
