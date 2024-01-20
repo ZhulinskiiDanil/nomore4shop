@@ -5,7 +5,7 @@
       to="/profile/settings"
       :class="$style.settings"
     >
-      <UIButton uppercase>
+      <UIButton uppercase mini>
         Настройки
       </UIButton>
     </NuxtLink>
