@@ -1,6 +1,11 @@
 <template>
   <div :class="$style.container">
-    <ProfileHead />
+    <ProfileHead
+      avatarURL="https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg"
+      title="Ваш профиль"
+      username="@nomer4krab"
+      description="Описание пользователя"
+    />
     <ProfileBalance />
     <ProfileSocials />
     <ProfileProductsHead />

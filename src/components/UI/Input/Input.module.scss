@@ -1,42 +1,20 @@
+@import "./scss/Input.default.scss";
+
 label.label {
   display: flex;
   align-items: center;
   gap: .8rem;
   
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+
   user-select: none;
-  padding-right: 1rem;
+  transition: .15s ease;
 
-  &.dark,
-  &.light {
-    $textColor: #fff;
-
-    background: $inputBg;
-    color: $textColor;
-
-    input {
-      &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px $inputBg inset;
-        -webkit-text-fill-color: $textColor;
-      }
-    }
-
-    &.gray {
-      background: $inputGrayBg;
-
-      input {
-        &:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0px 1000px $inputGrayBg inset;
-          -webkit-text-fill-color: $textColor;
-        }
-      }
-    }
-  }
-
-  // TYPE.wrong
-  &.wrong {
-    border-bottom: 1px solid color-mix(in srgb, $inputWrongColor, transparent 60%);
+  &.password {
+    padding-right: 1rem;
   }
   
   &.fill {
@@ -50,32 +28,15 @@ label.label {
     outline: none;
     background: none;
     width: 100%;
-    padding: 0.9375rem 0 1rem 0.9375rem;
+    padding: 0.625rem 1rem;
     font-size: inherit;
-
-    &:placeholder {
-      color: #303030;
-    }
+    transition: .15s ease;
   }
 
   .icon {
     flex-shrink: 0;
-    width: 1rem;
-    height: 1rem;
-    cursor: pointer;
-  }
-
-  .btn {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    outline: none;
-
-    border-radius: .5rem;
-    padding: 6px 24px 9px 27px;
-    background: rgba(9, 9, 11, 1);
+    width: 1.125rem;
+    height: 1.125rem;
     cursor: pointer;
   }
 

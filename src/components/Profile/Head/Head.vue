@@ -1,30 +1,39 @@
 <template>
   <div :class="$style.head">
-    <NuxtLink to="/profile/settings" :class="$style.settings">
+    <NuxtLink
+      v-if="$route.path === '/profile'"
+      to="/profile/settings"
+      :class="$style.settings"
+    >
       <UIButton uppercase>
         Настройки
       </UIButton>
     </NuxtLink>
-    <div :class="$style.avatar">
+    <div v-if="avatarURL" :class="$style.avatar">
       <img
-        src="https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg"
+        :src="avatarURL"
         alt="Avatar"
       />
     </div>
-    <div :class="$style.title">
-      Ваш профиль
+    <div v-if="title" :class="$style.title">
+      {{ title }}
     </div>
-    <div :class="$style.username">
-      @nomer4krab
+    <div v-if="username" :class="$style.username">
+      {{ username }}
     </div>
-    <div :class="$style.description">
-      Описание пользователя
+    <div v-if="description" :class="$style.description">
+      {{ description }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  
+  defineProps<{
+    avatarURL?: string
+    title?: string
+    username?: string
+    description?: string
+  }>()
 </script>
 
 <style lang="scss" src="./Head.module.scss" module></style>

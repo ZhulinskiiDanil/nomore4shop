@@ -1,3 +1,86 @@
 .container {
-  
+  *:not(textarea, input) {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .list {
+    > .title {
+      display: flex;
+      align-items: flex-start;
+      padding: 1rem 1rem .5rem 1rem;
+      gap: 0.625rem;
+    }
+
+    .title {
+      color: $light;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 800;
+      font-stretch: 150%;
+      line-height: normal;
+    }
+
+    .cell {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+      gap: 1rem;
+
+      background: $dark10;
+
+      .textarea {
+        width: 100%;
+        resize: vertical;
+        min-height: 100px;
+        max-height: 140px;
+      }
+    }
+
+    .rows {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+
+      background: $dark10;
+
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+        
+        span {
+          color: $yellow20;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          font-stretch: 120%;
+
+          max-width: 120px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
 }

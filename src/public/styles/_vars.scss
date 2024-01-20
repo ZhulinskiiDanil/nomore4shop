@@ -37,6 +37,13 @@ $buttonStrokedTextHover: $white;
 $buttonStrokedDisabledBg: transparent;
 $buttonStrokedDisabledText: $white;
 
+// Input
 $inputDefaultBg: $dark;
+$inputDefaultText: $light;
 $inputDefaultPlaceholder: $light10;
-$inputDefaultText: $white;
+$inputDefaultBgWrong: $dark;
+$inputDefaultTextWrong: $light;
+$inputDefaultPlaceholderWrong: $light10;
+$inputDefaultBgHover: $dark;
+$inputDefaultTextHover: $light;
+$inputDefaultPlaceholderHover: $light10;
