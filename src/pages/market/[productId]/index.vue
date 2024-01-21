@@ -3,6 +3,45 @@
     <MarketProductGallery
       :imageURLS="product.imageURLS"
     />
+    <MarketProductAuthor
+      :data="product"
+    />
+    <div :class="$style.content">
+      <MarketProductPrice
+        :amount="product.price"
+      />
+      <div :class="$style.converted">
+        {{ product.price }} USDT ~ 3754 UAH
+      </div>
+      <div :class="$style.info">
+        Цена переведена в гривны по текущему курсу долара (при оплате может действовать другой курс, цена может меняться в зависимости от метода оплаты или же если в объялвлении присутствует торг)
+      </div>
+      <MarketProductRow
+        column
+        title="Описание"
+        value="Hello wolrd"
+      />
+      <MarketProductRow
+        title="Состояние:"
+        value="Б/У"
+      />
+      <MarketProductRow
+        title="Оценка состояния:"
+        value="10"
+      />
+      <MarketProductRow
+        title="Размер:"
+        value="42 - 43"
+      />
+    </div>
+    <div :class="$style.buttons">
+      <UIButton uppercase fill>
+        Написать продавцу
+      </UIButton>
+      <UIButton uppercase fill>
+        Оплатить криптовалютой
+      </UIButton>
+    </div>
   </div>
 </template>
 

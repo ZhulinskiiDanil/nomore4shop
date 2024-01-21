@@ -1,0 +1,32 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  gap: .25rem;
+
+  background: $dark10;
+
+  &.column {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .title {
+    color: $light;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 118.75%; /* 1.1875rem */
+    font-stretch: 125%;
+  }
+
+  .value {
+    color: $light10;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 118.75%; /* 1.03906rem */
+  }
+}

@@ -1,3 +1,31 @@
 .container {
-  
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    gap: .5rem;
+
+    .converted {
+      color: $light10;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .info {
+      color: $light5;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 200;
+      line-height: normal;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: .5rem;
+  }
 }
