@@ -2,6 +2,7 @@
   <header :class="$style.header">
     <NuxtLink to="/market">
       <div :class="$style.company">
+        <div :class="$style.shadow"></div>
         <div :class="$style.name">
           NoMore4Shop
         </div>
@@ -20,7 +21,7 @@
         </div>
         <div :class="$style.avatar">
           <img
-            src="https://www.google.com/favicon.ico"
+            src="https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg"
             alt="Avatar"
           />
         </div>

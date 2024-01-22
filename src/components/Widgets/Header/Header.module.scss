@@ -1,18 +1,37 @@
 header.header {
+  z-index: 0;
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
 
-  background: $dark10;
+  background: $dark;
+  border-bottom: 1px solid $dark10;
   
   user-select: none;
   -webkit-user-drag: none;
 
   .company {
+    position: relative;
+    
     display: flex;
     flex-direction: column;
     cursor: pointer;
+
+    .shadow {
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0) skewX(-40deg);
+      width: 5rem;
+      height: 10rem;
+      background: $accent2;
+      opacity: .4;
+      filter: blur(50px);
+    }
 
     .name {
       color: $yellow20;
@@ -42,8 +61,9 @@ header.header {
       color: $yellow20;
       font-size: 0.75rem;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 800;
       line-height: normal;
+      font-stretch: 150%;
     }
 
     .avatar {
