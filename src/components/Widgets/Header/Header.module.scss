@@ -9,7 +9,8 @@ header.header {
 
   background: $dark;
   border-bottom: 1px solid $dark10;
-  
+  overflow: hidden;
+
   user-select: none;
   -webkit-user-drag: none;
 
