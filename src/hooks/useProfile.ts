@@ -1,4 +1,3 @@
-import { Api } from '@/shop-api';
 import type { User } from '@/ts';
 
 type UseProfileOptions = {
@@ -16,7 +15,7 @@ export async function useProfile(options?: UseProfileOptions) {
 
   async function loadProfile() {
     state.value.isLoading = true;
-    const response = await Api.profile.getProfile();
+    const response = await $api.profile.getProfile();
     state.value.isLoading = false;
 
     state.value.profile = response;

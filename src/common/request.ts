@@ -1,20 +1,14 @@
-import { baseUrl } from '@/constants/baseUrl';
-
-type FilterFirstElement<T extends unknown[]> = T extends [
-  unknown,
-  ...infer R
-]
-  ? R
-  : [];
+type FetchOptions = Parameters<typeof $fetch>['1'];
 
 export const request = async <T = any>(
-  url: string,
-  ...args: FilterFirstElement<Parameters<typeof $fetch>>
+  path: string,
+  opts?: FetchOptions
 ): Promise<T | null> => {
-  const options: (typeof args)[0] = args[0] || {};
+  const baseURL = useApiBaseURL();
+  const options = opts || {};
   const token = useCookie('token');
 
-  options.baseURL = baseUrl;
+  options.baseURL = baseURL;
   options.ignoreResponseError = true;
   options.headers = options.headers || {};
   options.headers = {
@@ -25,7 +19,7 @@ export const request = async <T = any>(
 
   try {
     return new Promise((res) => {
-      $fetch(url, options)
+      $fetch(path, options)
         .then((data) => res(data as T))
         .catch(() => res(null));
     });

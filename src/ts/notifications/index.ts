@@ -4,3 +4,8 @@ export type NotificationMessage = {
   content: string;
   type: string | null;
 };
+
+export type MessageHandler = {
+  type: string | null;
+  fn: (msg: NotificationMessage, data?: any) => void;
+};

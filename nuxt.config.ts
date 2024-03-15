@@ -6,12 +6,11 @@ export default defineNuxtConfig({
     enabled: false
   },
   vue: {
-    defineModel: true,
     propsDestructure: true
   },
   runtimeConfig: {
     public: {
-      baseUrl: process.env.VITE_API_URL,
+      BASE_URL: process.env.VITE_API_URL,
       VITE_TG_BOT_LINK: process.env.VITE_TG_BOT_LINK,
       VITE_TG_CHAT_LINK: process.env.VITE_TG_CHAT_LINK,
       VITE_TG_CHANNEL_LINK: process.env.VITE_TG_CHANNEL_LINK
@@ -78,6 +77,5 @@ export default defineNuxtConfig({
         name: 'UK'
       }
     ]
-    /* module options */
   }
 });

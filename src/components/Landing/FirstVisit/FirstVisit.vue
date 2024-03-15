@@ -22,12 +22,10 @@
 </template>
 
 <script setup lang="ts">
-import { Api } from '@/shop-api';
-
 const data = ref<null | string>(null);
 
 async function authorize() {
-  const response = await Api.auth.authorize();
+  const response = await $api.auth.authorize();
 
   if (response.authorized) {
     await navigateTo('/market', {

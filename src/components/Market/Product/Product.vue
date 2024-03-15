@@ -13,7 +13,7 @@
       </div>
       <div :class="$style.date">
         {{
-          utils.date.getRelativeDate(data.createdAt, null, {
+          $utils.date.getRelativeDate(data.createdAt, null, {
             locale: 'ru'
           })
         }}
@@ -32,11 +32,8 @@
 
 <script setup lang="ts">
 import type { Product } from '@/ts/market';
-import { utils } from '@/common/utils';
 
-defineProps<{
-  data: Product;
-}>();
+defineProps<{ data: Product }>();
 </script>
 
 <style lang="scss" src="./Product.module.scss" module></style>

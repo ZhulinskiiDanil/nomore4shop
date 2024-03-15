@@ -29,6 +29,7 @@
   "dependencies": {
     "@types/three": "^0.158.3",
     "gsap": "^3.12.3",
+    "maska": "^2.1.11",
     "nuxi": "^3.6.5",
     "three": "^0.158.0",
     "typecheck": "^0.1.2",

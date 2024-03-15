@@ -1,12 +1,10 @@
-import type { NotificationMessage } from '@/ts';
+import type {
+  NotificationMessage,
+  MessageHandler
+} from '@/ts/notifications';
 
-type MessageHandler = {
-  type: string | null;
-  fn: (msg: NotificationMessage, data?: any) => void;
-};
-
-const messages: NotificationMessage[] = [];
 const handlers: MessageHandler[] = [];
+const messages: NotificationMessage[] = [];
 
 export function useNotification(
   handler?: MessageHandler['fn'],
