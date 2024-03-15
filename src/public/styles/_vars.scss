@@ -1,16 +1,16 @@
 // Палитра
 $white: rgb(255, 255, 255);
-$accent1: rgb(92, 76, 64);
-$accent2: rgb(150, 116, 91);
-$yellow10: rgb(212, 206, 181);
-$yellow15: rgb(204, 194, 159);
-$yellow20: rgb(204, 185, 133);
-$dark: rgb(21, 20, 20);
-$dark10: rgb(27, 25, 25);
-$dark20: rgb(36, 34, 33);
-$light: rgb(232, 226, 220);
-$light5: rgb(138, 134, 129);
-$light10: rgb(190, 184, 181);
+$accent1: #40485C;
+$accent2: #5B6C96;
+$yellow10: #bac5e0;
+$yellow15: #9FACCC;
+$yellow20: #8393CC;
+$dark: #141415;
+$dark10: #19191B;
+$dark20: #212224;
+$light: #DCDFE8;
+$light5: #81848A;
+$light10: #BEB8B5;
 
 // Clear width
 $cw: 640px;
@@ -24,8 +24,8 @@ $bgColor: $dark;
 // Components
 $buttonDefaultBg: $dark20;
 $buttonDefaultText: $light;
-$buttonDefaultBgHover: rgb(43, 42, 40);
-$buttonDefaultTextHover: $yellow20;
+$buttonDefaultBgHover: rgb(35, 36, 37);
+$buttonDefaultTextHover: $light;
 $buttonDefaultDisabledBg: $dark20;
 $buttonDefaultDisabledText: $yellow10;
 

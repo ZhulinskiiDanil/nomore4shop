@@ -3,15 +3,13 @@
   flex-direction: column;
 
   min-height: 100vh;
-  background: linear-gradient(
-    to top, $dark10 0%, $dark 100%
-  );
+  background: linear-gradient(180deg, #1c1d20 0%, #17181a 100%);;
 
   .texts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .37rem;
+    gap: 1rem;
     
     position: absolute;
     left: 50%;
@@ -20,13 +18,13 @@
     width: 100%;
 
     .title {
-      color: $light;
+      font-weight: 600;
+      font-size: 3rem;
       text-align: center;
-      font-size: 2rem;
-      font-style: normal;
-      font-weight: 800;
-      line-height: normal;
-      font-stretch: 150%;
+      background: linear-gradient(35deg, #fff 0%, #aec5ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
@@ -35,10 +33,11 @@
       color: $light;
       text-align: center;
       font-size: 1rem;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      font-stretch: 120%;
+      font-weight: 200;
+      text-align: center;
+      max-width: 320px;
+      color: $light;
+      letter-spacing: .05rem;
 
       [data-accent] {
         color: $yellow20;
