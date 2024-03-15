@@ -13,9 +13,13 @@
       </div>
       <div :class="$style.date">
         {{
-          $utils.date.getRelativeDate(data.createdAt, null, {
-            locale: 'ru'
-          })
+          $utils.date.getPastRelativeDate(
+            data.createdAt,
+            'years',
+            {
+              locale: 'ru'
+            }
+          )
         }}
       </div>
       <div :class="$style.price">
