@@ -15,60 +15,60 @@
   >
     <input
       :id="id"
-      :name="name"
       v-model="model"
+      :name="name"
       :type="type"
       :placeholder="placeholder || 'Placeholder'"
       :disabled="!!disabled"
       :readonly="!!readonly"
       :autocomplete="autocomplete"
-      @keypress="(e: KeyboardEvent) => {
-        if (numeric && !isNumeric(e.key)) {
-          e.preventDefault()
-        } else {
-          return true
+      @keypress="
+        (e: KeyboardEvent) => {
+          if (numeric && !isNumeric(e.key)) {
+            e.preventDefault();
+          } else {
+            return true;
+          }
         }
-      }"
+      "
     />
   </label>
 </template>
 
 <script setup lang="ts">
-  import type { UIKitElementTheme } from '../types';
-  import { uiConfig } from '../ui.config';
+import type { UIKitElementTheme } from '../types';
+import { uiConfig } from '../ui.config';
 
-  const model = defineModel()
-  const emit = defineEmits<{
-    buttonClick: []
-    copy: [text: string]
-  }>()
-  const props = defineProps<{
-    id?: string
-    name?: string
-    numeric?: boolean
-    autocomplete?: string
-    placeholder?: string
-    type?: HTMLInputElement["type"]
-    theme?: UIKitElementTheme
-    fill?: boolean
-    white?: boolean
-    gray?: boolean
-    wrong?: boolean
-    button?: string
-    disabled?: boolean
-    readonly?: boolean
-    copied?: boolean
-  }>()
+defineEmits<{
+  buttonClick: [];
+  copy: [text: string];
+}>();
+const model = defineModel<string>();
+const props = defineProps<{
+  id?: string;
+  name?: string;
+  numeric?: boolean;
+  autocomplete?: string;
+  placeholder?: string;
+  type?: HTMLInputElement['type'];
+  theme?: UIKitElementTheme;
+  fill?: boolean;
+  white?: boolean;
+  gray?: boolean;
+  wrong?: boolean;
+  button?: string;
+  disabled?: boolean;
+  readonly?: boolean;
+  copied?: boolean;
+}>();
 
-  const inputTheme = computed(() => (
-    props.theme
-    || uiConfig?.getTheme?.().value
-    || 'light'
-  ))
+const inputTheme = computed(
+  () => props.theme || uiConfig?.getTheme?.().value || 'light'
+);
 
-  function isNumeric(str: string) {
-    return !isNaN(parseFloat(str.trim()))
-  }
+function isNumeric(str: string) {
+  return !isNaN(parseFloat(str.trim()));
+}
 </script>
 
 <style lang="scss" module src="./Input.module.scss"></style>

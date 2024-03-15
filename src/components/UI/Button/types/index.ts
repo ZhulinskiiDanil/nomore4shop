@@ -1,1 +1,1 @@
-export type ButtonType = "default" | "stroked"
+export type ButtonType = 'default' | 'stroked';

@@ -23,34 +23,30 @@
 </template>
 
 <script setup lang="ts">
-  import { uiConfig } from '../ui.config';
-  import type { UIKitElementTheme } from '../types';
-  import type { ButtonType } from './types'
+import { uiConfig } from '../ui.config';
+import type { UIKitElementTheme } from '../types';
+import type { ButtonType } from './types';
 
-  const slots = defineSlots()
-  const props = defineProps<{
-    type?: ButtonType
-    theme?: UIKitElementTheme
-    mini?: boolean
-    uppercase?: boolean
-    withoutGlitchEffect?: boolean
-    disabled?: boolean
-    hovered?: boolean
-    focused?: boolean
-    pressed?: boolean
-    fill?: boolean
-    red?: boolean
-  }>()
+defineSlots();
+const props = defineProps<{
+  type?: ButtonType;
+  theme?: UIKitElementTheme;
+  mini?: boolean;
+  uppercase?: boolean;
+  withoutGlitchEffect?: boolean;
+  disabled?: boolean;
+  hovered?: boolean;
+  focused?: boolean;
+  pressed?: boolean;
+  fill?: boolean;
+  red?: boolean;
+}>();
 
-  const buttonRef = ref<HTMLButtonElement | null>(null)
-  const buttonType = computed(() => (
-    props.type || 'default'
-  ))
-  const buttonTheme = computed(() => (
-    props.theme
-    || uiConfig?.getTheme?.().value
-    || 'light'
-  ))
+const buttonRef = ref<HTMLButtonElement | null>(null);
+const buttonType = computed(() => props.type || 'default');
+const buttonTheme = computed(
+  () => props.theme || uiConfig?.getTheme?.().value || 'light'
+);
 </script>
 
 <style lang="scss" module src="./Button.module.scss"></style>

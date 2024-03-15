@@ -15,27 +15,36 @@
     <div v-if="description" :class="$style.description">
       {{ description }}
     </div>
-    <NuxtLink :class="$style.link" v-if="link" :to="localePath(link.href)">
+    <NuxtLink
+      v-if="link"
+      :class="$style.link"
+      :to="localePath(link.href)"
+    >
       {{ link.name }}
     </NuxtLink>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks/useTheme';
 
-  const { theme, setTheme } = useTheme()
-  const localePath = useLocalePath()
-  const props = defineProps<{
-    title?: string
-    additional?: string
-    error?: string | null
-    description?: string | null
-    link?: {
-      href: string
-      name: string
-    }
-  }>()
+defineProps<{
+  title?: string;
+  additional?: string;
+  error?: string | null;
+  description?: string | null;
+  link?: {
+    href: string;
+    name: string;
+  };
+}>();
+
+const localePath = useLocalePath();
+const { theme } = useTheme();
 </script>
 
-<style lang="scss" src="./InputWithTitle.module.scss" module></style>
+<style
+  lang="scss"
+  src="./InputWithTitle.module.scss"
+  module
+></style>

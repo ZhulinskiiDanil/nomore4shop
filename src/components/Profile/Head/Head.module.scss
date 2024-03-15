@@ -38,7 +38,7 @@
   }
 
   &:has(* + .title) .title {
-    margin-top: .75rem;
+    margin-top: 0.75rem;
   }
 
   .username {
@@ -48,11 +48,11 @@
     font-weight: 800;
     line-height: normal;
     font-stretch: 150%;
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 
   &:has(* + .username) .username {
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 
   .description {
@@ -61,10 +61,10 @@
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 
   &:has(* + .description) .description {
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 }

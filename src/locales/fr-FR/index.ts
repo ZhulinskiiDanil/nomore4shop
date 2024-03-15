@@ -7,7 +7,7 @@ export default {
     bots: {
       tg: 'Bot de télégramme',
       vk: 'Bot sur VK'
-    },
+    }
   },
   links: {
     home: 'maison',
@@ -16,18 +16,23 @@ export default {
   },
   errors: {
     auth: {
-      INVALID_LOGIN: "Identifiant invalide",
-      INVALID_PASSWORD: "Mot de passe incorrect",
-      INVALID_CREDENTIALS: "Données erronées",
-      TO_MANY_REQUESTS: "Vous envoyez trop de demandes, veuillez patienter un instant",
-      INVALID_EMAIL: "Email invalide",
-      EMAIL_NOT_FOUND: "Il n'y a aucun utilisateur avec cet e-mail",
-      INVALID_CAPTCHA: "Captcha invalide",
-      LOGIN_EXISTS: "Un utilisateur avec cette connexion existe déjà",
-      EMAIL_EXISTS: "Un utilisateur avec cette adresse e-mail est déjà enregistré",
-      PASSWORD_REPEAT_MISMATCH: "Non concordance des mots de passe",
-      INVALID_RESPONSE: "Erreur du serveur",
-      INVALID_CODE: "Code incorrect"
+      INVALID_LOGIN: 'Identifiant invalide',
+      INVALID_PASSWORD: 'Mot de passe incorrect',
+      INVALID_CREDENTIALS: 'Données erronées',
+      TO_MANY_REQUESTS:
+        'Vous envoyez trop de demandes, veuillez patienter un instant',
+      INVALID_EMAIL: 'Email invalide',
+      EMAIL_NOT_FOUND:
+        "Il n'y a aucun utilisateur avec cet e-mail",
+      INVALID_CAPTCHA: 'Captcha invalide',
+      LOGIN_EXISTS:
+        'Un utilisateur avec cette connexion existe déjà',
+      EMAIL_EXISTS:
+        'Un utilisateur avec cette adresse e-mail est déjà enregistré',
+      PASSWORD_REPEAT_MISMATCH:
+        'Non concordance des mots de passe',
+      INVALID_RESPONSE: 'Erreur du serveur',
+      INVALID_CODE: 'Code incorrect'
     }
   },
   notifications: {
@@ -47,7 +52,7 @@ export default {
       },
       invalidEmail: {
         // notifications.error.title
-        description: 'Veuillez saisir l\'e-mail correct'
+        description: "Veuillez saisir l'e-mail correct"
       },
       successEmailSending: {
         // notifications.default.title
@@ -55,7 +60,8 @@ export default {
       },
       emailServerError: {
         // notifications.error.title
-        description: 'Erreur de serveur, échec d\'envoi d\'e-mail à votre adresse e-mail'
+        description:
+          "Erreur de serveur, échec d'envoi d'e-mail à votre adresse e-mail"
       },
       resetPasswordSuccess: {
         // notifications.default.title
@@ -63,13 +69,14 @@ export default {
       },
       resetPasswordError: {
         // notifications.serverError.title
-        description: 'Erreur de serveur, échec de modification du mot de passe'
+        description:
+          'Erreur de serveur, échec de modification du mot de passe'
       }
     }
   },
   header: {
     authorizationButton: {
-      name: 'S\'inscrire / Connexion'
+      name: "S'inscrire / Connexion"
     },
     menu: {
       signInButton: {
@@ -85,7 +92,7 @@ export default {
       {
         name: 'La navigation',
         links: [
-          { name: 'Page d\'accueil', href: '/' },
+          { name: "Page d'accueil", href: '/' },
           { name: 'Bref aperçu', href: '/' },
           { name: 'Panneau de contrôle', href: '/' }
         ]
@@ -93,9 +100,9 @@ export default {
       {
         name: 'Politique',
         links: [
-          { name: 'Conditions d\'utilisation', href: '/' },
+          { name: "Conditions d'utilisation", href: '/' },
           { name: 'Politique de confidentialité', href: '/' },
-          { name: 'Traitement de l\'information', href: '/' }
+          { name: "Traitement de l'information", href: '/' }
         ]
       }
     ]
@@ -107,8 +114,10 @@ export default {
       title: 'Source Changer'
     },
     mainSection: {
-      title: 'Changeur légitime gratuit pour les jeux populaires',
-      description: 'Créez une nouvelle expérience visuelle dans les jeux CS2, etc.',
+      title:
+        'Changeur légitime gratuit pour les jeux populaires',
+      description:
+        'Créez une nouvelle expérience visuelle dans les jeux CS2, etc.',
       button: {
         name: 'Essayez-le'
       }
@@ -122,11 +131,13 @@ export default {
     features: [
       {
         title: 'Peaux',
-        description: 'L\'importance de ces problèmes est si évidente que la mise en œuvre des objectifs prévus joue un rôle important dans la formation d\'un système de formation du personnel et répond aux besoins urgents'
+        description:
+          "L'importance de ces problèmes est si évidente que la mise en œuvre des objectifs prévus joue un rôle important dans la formation d'un système de formation du personnel et répond aux besoins urgents"
       },
       {
         title: 'Effets',
-        description: 'L\'importance de ces problèmes est si évidente que la mise en œuvre des objectifs prévus joue un rôle important dans la formation d\'un système de formation du personnel et répond aux besoins urgents'
+        description:
+          "L'importance de ces problèmes est si évidente que la mise en œuvre des objectifs prévus joue un rôle important dans la formation d'un système de formation du personnel et répond aux besoins urgents"
       }
     ],
     tryNow: {
@@ -147,7 +158,7 @@ export default {
       description: 'Veuillez compléter le captcha',
       inputs: {
         code: {
-          placeholder: 'Entrez le texte de l\'image ici'
+          placeholder: "Entrez le texte de l'image ici"
         }
       },
       submit: 'Continuer'
@@ -207,11 +218,12 @@ export default {
     },
     signUpSubmit: {
       seo: {
-        title: 'Confirmation d\'enregistrement'
+        title: "Confirmation d'enregistrement"
       },
       title: 'Confirmation de compte',
-      description: 'Pour confirmer, envoyez ce code à notre bot Telegram ou VK',
-      submit: 'J\'ai confirmé pour continuer'
+      description:
+        'Pour confirmer, envoyez ce code à notre bot Telegram ou VK',
+      submit: "J'ai confirmé pour continuer"
     },
     restorePassword: {
       seo: {
@@ -232,7 +244,8 @@ export default {
         title: 'Récupération de mot de passe'
       },
       title: 'Récupération de mot de passe',
-      success: 'Le mot de passe a été réinitialisé avec succès. Un nouveau mot de passe a été envoyé à votre email',
+      success:
+        'Le mot de passe a été réinitialisé avec succès. Un nouveau mot de passe a été envoyé à votre email',
       submit: 'Entrer',
       process: 'Expédition...'
     }
@@ -244,13 +257,14 @@ export default {
     },
     welcome: 'Bonjour',
     userInfo: {
-      title: 'Informations de l\'utilisateur',
-      username: 'Nom d\'utilisateur',
-      createdAt: 'Date d\'inscription'
+      title: "Informations de l'utilisateur",
+      username: "Nom d'utilisateur",
+      createdAt: "Date d'inscription"
     },
     download: {
       title: 'Installation de SOURCECHANGER',
-      description: 'Juste quelques clics pour jouer avec les skins'
+      description:
+        'Juste quelques clics pour jouer avec les skins'
     }
   },
 
@@ -261,7 +275,8 @@ export default {
     title: 'Gestion de compte',
     email: {
       title: 'Email',
-      desription: 'Gestion du courrier lié à votre compte SOURCECHANGER',
+      desription:
+        'Gestion du courrier lié à votre compte SOURCECHANGER',
       buttons: {
         change: {
           name: 'Changement'
@@ -270,7 +285,8 @@ export default {
     },
     password: {
       title: 'Mot de passe',
-      desription: 'Gérer le mot de passe nécessaire pour vous connecter à votre compte SOURCECHANGER',
+      desription:
+        'Gérer le mot de passe nécessaire pour vous connecter à votre compte SOURCECHANGER',
       inputs: {
         oldPassword: {
           placeholder: 'ancien mot de passe'
@@ -292,4 +308,4 @@ export default {
       }
     }
   }
-}
+};

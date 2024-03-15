@@ -7,7 +7,7 @@ export default {
     bots: {
       tg: 'Telegram bot',
       vk: 'Bot on VK'
-    },
+    }
   },
   links: {
     home: 'Home',
@@ -16,18 +16,20 @@ export default {
   },
   errors: {
     auth: {
-      INVALID_LOGIN: "Invalid login",
-      INVALID_PASSWORD: "Incorrect password",
-      INVALID_CREDENTIALS: "Wrong data",
-      TO_MANY_REQUESTS: "You are sending too many requests, please wait a moment",
-      INVALID_EMAIL: "Invalid email",
-      EMAIL_NOT_FOUND: "There is no user with this email",
-      INVALID_CAPTCHA: "Invalid captcha",
-      LOGIN_EXISTS: "A user with this login already exists",
-      EMAIL_EXISTS: "A user with this e-mail is already registered",
-      PASSWORD_REPEAT_MISMATCH: "Password mismatch",
-      INVALID_RESPONSE: "Server error",
-      INVALID_CODE: "Incorrect code"
+      INVALID_LOGIN: 'Invalid login',
+      INVALID_PASSWORD: 'Incorrect password',
+      INVALID_CREDENTIALS: 'Wrong data',
+      TO_MANY_REQUESTS:
+        'You are sending too many requests, please wait a moment',
+      INVALID_EMAIL: 'Invalid email',
+      EMAIL_NOT_FOUND: 'There is no user with this email',
+      INVALID_CAPTCHA: 'Invalid captcha',
+      LOGIN_EXISTS: 'A user with this login already exists',
+      EMAIL_EXISTS:
+        'A user with this e-mail is already registered',
+      PASSWORD_REPEAT_MISMATCH: 'Password mismatch',
+      INVALID_RESPONSE: 'Server error',
+      INVALID_CODE: 'Incorrect code'
     }
   },
   notifications: {
@@ -55,7 +57,8 @@ export default {
       },
       emailServerError: {
         // notifications.error.title
-        description: 'Server error, failed to send email to your email'
+        description:
+          'Server error, failed to send email to your email'
       },
       resetPasswordSuccess: {
         // notifications.default.title
@@ -108,7 +111,8 @@ export default {
     },
     mainSection: {
       title: 'Free legit changer for popular games',
-      description: 'Create a new visual experience in CS2 games, etc.',
+      description:
+        'Create a new visual experience in CS2 games, etc.',
       button: {
         name: 'Try it'
       }
@@ -122,11 +126,13 @@ export default {
     features: [
       {
         title: 'Skins',
-        description: 'The significance of these problems is so obvious that the implementation of the planned targets plays an important role in the formation of a personnel training system and meets urgent needs'
+        description:
+          'The significance of these problems is so obvious that the implementation of the planned targets plays an important role in the formation of a personnel training system and meets urgent needs'
       },
       {
         title: 'Effects',
-        description: 'The significance of these problems is so obvious that the implementation of the planned targets plays an important role in the formation of a personnel training system and meets urgent needs'
+        description:
+          'The significance of these problems is so obvious that the implementation of the planned targets plays an important role in the formation of a personnel training system and meets urgent needs'
       }
     ],
     tryNow: {
@@ -210,7 +216,8 @@ export default {
         title: 'Confirmation of registration'
       },
       title: 'Account confirmation',
-      description: 'To confirm, send this code to our Telegram or VK bot',
+      description:
+        'To confirm, send this code to our Telegram or VK bot',
       submit: 'I confirmed to continue'
     },
     restorePassword: {
@@ -232,7 +239,8 @@ export default {
         title: 'Password recovery'
       },
       title: 'Password recovery',
-      success: 'Password reset successfully. A new password has been sent to your email',
+      success:
+        'Password reset successfully. A new password has been sent to your email',
       submit: 'Login',
       process: 'Dispatch...'
     }
@@ -261,7 +269,8 @@ export default {
     title: 'Account management',
     email: {
       title: 'Email',
-      desription: 'Managing mail linked to your SOURCECHANGER account',
+      desription:
+        'Managing mail linked to your SOURCECHANGER account',
       buttons: {
         change: {
           name: 'Change'
@@ -270,7 +279,8 @@ export default {
     },
     password: {
       title: 'Password',
-      desription: 'Managing the password needed to log into your SOURCECHANGER account',
+      desription:
+        'Managing the password needed to log into your SOURCECHANGER account',
       inputs: {
         oldPassword: {
           placeholder: 'Old Password'
@@ -292,4 +302,4 @@ export default {
       }
     }
   }
-}
+};

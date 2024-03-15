@@ -5,15 +5,10 @@
       to="/profile/settings"
       :class="$style.settings"
     >
-      <UIButton uppercase mini>
-        Настройки
-      </UIButton>
+      <UIButton uppercase mini> Настройки </UIButton>
     </NuxtLink>
     <div v-if="avatarURL" :class="$style.avatar">
-      <img
-        :src="avatarURL"
-        alt="Avatar"
-      />
+      <img :src="avatarURL" alt="Avatar" />
     </div>
     <div v-if="title" :class="$style.title">
       {{ title }}
@@ -28,12 +23,12 @@
 </template>
 
 <script setup lang="ts">
-  defineProps<{
-    avatarURL?: string
-    title?: string
-    username?: string
-    description?: string
-  }>()
+defineProps<{
+  avatarURL?: string;
+  title?: string;
+  username?: string;
+  description?: string;
+}>();
 </script>
 
 <style lang="scss" src="./Head.module.scss" module></style>

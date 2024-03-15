@@ -1,4 +1,4 @@
-import path from "path";
+import path from 'path';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   vue: {
     defineModel: true,
-    propsDestructure: true,
+    propsDestructure: true
   },
   runtimeConfig: {
     public: {
@@ -22,8 +22,11 @@ export default defineNuxtConfig({
   vite: {
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./src"),
-        "@request": path.resolve(__dirname, "./src/common/request.ts")
+        '@': path.resolve(__dirname, './src'),
+        '@request': path.resolve(
+          __dirname,
+          './src/common/request.ts'
+        )
       }
     },
     css: {
@@ -37,9 +40,7 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: [
-    '@nuxtjs/i18n',
-  ],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/eslint-module'],
   i18n: {
     vueI18n: './i18n.config.ts',
     defaultLocale: 'ru',
@@ -75,8 +76,8 @@ export default defineNuxtConfig({
         code: 'uk',
         file: 'uk-UK/index.ts',
         name: 'UK'
-      },
+      }
     ]
     /* module options */
   }
-})
+});

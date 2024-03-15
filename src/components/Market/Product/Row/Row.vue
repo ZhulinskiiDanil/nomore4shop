@@ -10,11 +10,11 @@
 </template>
 
 <script setup lang="ts">
-  defineProps<{
-    column?: boolean
-    title: string
-    value: string
-  }>()
+defineProps<{
+  column?: boolean;
+  title: string;
+  value: string;
+}>();
 </script>
 
 <style lang="scss" src="./Row.module.scss" module></style>

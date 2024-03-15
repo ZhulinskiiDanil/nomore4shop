@@ -2,8 +2,8 @@
   .content {
     display: flex;
     flex-direction: column;
-    padding: .5rem;
-    gap: .5rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
 
     .converted {
       color: $light10;
@@ -26,6 +26,6 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 }

@@ -1,21 +1,21 @@
 // Палитра
 $white: rgb(255, 255, 255);
-$accent1: #40485C;
-$accent2: #5B6C96;
+$accent1: #40485c;
+$accent2: #5b6c96;
 $yellow10: #bac5e0;
-$yellow15: #9FACCC;
-$yellow20: #8393CC;
+$yellow15: #9faccc;
+$yellow20: #8393cc;
 $dark: #141415;
-$dark10: #19191B;
+$dark10: #19191b;
 $dark20: #212224;
-$light: #DCDFE8;
-$light5: #81848A;
-$light10: #BEB8B5;
+$light: #dcdfe8;
+$light5: #81848a;
+$light10: #beb8b5;
 
 // Clear width
 $cw: 640px;
 $one: calc(1vh + 5vw);
-$scrollWidth: .8rem;
+$scrollWidth: 0.8rem;
 $loaderSize: 20rem;
 $contentPaddingX: clamp(1rem, (1vh + 5vw) * 0.5, 2rem);
 

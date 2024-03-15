@@ -1,2 +1,2 @@
-export * from './getRelativeDate'
-export * from './getStaticDate'
+export * from './getRelativeDate';
+export * from './getStaticDate';

@@ -7,7 +7,7 @@ export default {
     bots: {
       tg: 'Telegram-Bot',
       vk: 'Bot auf VK'
-    },
+    }
   },
   links: {
     home: 'heim',
@@ -16,18 +16,23 @@ export default {
   },
   errors: {
     auth: {
-      INVALID_LOGIN: "Ungültiger Login",
-      INVALID_PASSWORD: "Falsches Passwort",
-      INVALID_CREDENTIALS: "Falschen Daten",
-      TO_MANY_REQUESTS: "Sie senden zu viele Anfragen. Bitte warten Sie einen Moment",
-      INVALID_EMAIL: "Ungültige E-Mail",
-      EMAIL_NOT_FOUND: "Es gibt keinen Benutzer mit dieser E-Mail",
-      INVALID_CAPTCHA: "ungültiges Captcha",
-      LOGIN_EXISTS: "Ein Benutzer mit diesem Login existiert bereits",
-      EMAIL_EXISTS: "Ein Benutzer mit dieser E-Mail ist bereits registriert",
-      PASSWORD_REPEAT_MISMATCH: "Die Passwörter stimmen nicht überein",
-      INVALID_RESPONSE: "Serverfehler",
-      INVALID_CODE: "Falscher Code"
+      INVALID_LOGIN: 'Ungültiger Login',
+      INVALID_PASSWORD: 'Falsches Passwort',
+      INVALID_CREDENTIALS: 'Falschen Daten',
+      TO_MANY_REQUESTS:
+        'Sie senden zu viele Anfragen. Bitte warten Sie einen Moment',
+      INVALID_EMAIL: 'Ungültige E-Mail',
+      EMAIL_NOT_FOUND:
+        'Es gibt keinen Benutzer mit dieser E-Mail',
+      INVALID_CAPTCHA: 'ungültiges Captcha',
+      LOGIN_EXISTS:
+        'Ein Benutzer mit diesem Login existiert bereits',
+      EMAIL_EXISTS:
+        'Ein Benutzer mit dieser E-Mail ist bereits registriert',
+      PASSWORD_REPEAT_MISMATCH:
+        'Die Passwörter stimmen nicht überein',
+      INVALID_RESPONSE: 'Serverfehler',
+      INVALID_CODE: 'Falscher Code'
     }
   },
   notifications: {
@@ -47,15 +52,18 @@ export default {
       },
       invalidEmail: {
         // notifications.error.title
-        description: 'Bitte geben Sie die richtige E-Mail-Adresse ein'
+        description:
+          'Bitte geben Sie die richtige E-Mail-Adresse ein'
       },
       successEmailSending: {
         // notifications.default.title
-        description: 'Wir haben einen Brief an Ihre E-Mail-Adresse gesendet'
+        description:
+          'Wir haben einen Brief an Ihre E-Mail-Adresse gesendet'
       },
       emailServerError: {
         // notifications.error.title
-        description: 'Serverfehler, E-Mail konnte nicht an Ihre E-Mail-Adresse gesendet werden'
+        description:
+          'Serverfehler, E-Mail konnte nicht an Ihre E-Mail-Adresse gesendet werden'
       },
       resetPasswordSuccess: {
         // notifications.default.title
@@ -63,7 +71,8 @@ export default {
       },
       resetPasswordError: {
         // notifications.serverError.title
-        description: 'Serverfehler, Passwort konnte nicht geändert werden'
+        description:
+          'Serverfehler, Passwort konnte nicht geändert werden'
       }
     }
   },
@@ -108,7 +117,8 @@ export default {
     },
     mainSection: {
       title: 'Kostenloser Legit-Changer für beliebte Spiele',
-      description: 'Schaffen Sie ein neues visuelles Erlebnis in CS2-Spielen usw.',
+      description:
+        'Schaffen Sie ein neues visuelles Erlebnis in CS2-Spielen usw.',
       button: {
         name: 'Versuch es'
       }
@@ -122,11 +132,13 @@ export default {
     features: [
       {
         title: 'Skins',
-        description: 'Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.'
+        description:
+          'Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.'
       },
       {
         title: 'Auswirkungen',
-        description: 'Die Bedeutung dieser Probleme ist so offensichtlich, dass die Umsetzung der geplanten Ziele eine wichtige Rolle bei der Gestaltung eines Personalschulungssystems spielt und dringenden Bedarf deckt'
+        description:
+          'Die Bedeutung dieser Probleme ist so offensichtlich, dass die Umsetzung der geplanten Ziele eine wichtige Rolle bei der Gestaltung eines Personalschulungssystems spielt und dringenden Bedarf deckt'
       }
     ],
     tryNow: {
@@ -159,7 +171,8 @@ export default {
       },
       success: {
         title: 'Großartig',
-        description: 'Sie haben die Autorisierung erfolgreich durchgeführt'
+        description:
+          'Sie haben die Autorisierung erfolgreich durchgeführt'
       }
     },
     signIn: {
@@ -210,7 +223,8 @@ export default {
         title: 'Bestätigung der Anmeldung'
       },
       title: 'Account Bestätigung',
-      description: 'Zur Bestätigung senden Sie diesen Code an unseren Telegram- oder VK-Bot',
+      description:
+        'Zur Bestätigung senden Sie diesen Code an unseren Telegram- oder VK-Bot',
       submit: 'Ich habe bestätigt, dass ich fortfahren möchte'
     },
     restorePassword: {
@@ -232,7 +246,8 @@ export default {
         title: 'Passwort Wiederherstellung'
       },
       title: 'Passwort Wiederherstellung',
-      success: 'Passwort erfolgreich zurückgesetzt. Ein neues Passwort wurde an Ihre E-Mail-Adresse gesendet',
+      success:
+        'Passwort erfolgreich zurückgesetzt. Ein neues Passwort wurde an Ihre E-Mail-Adresse gesendet',
       submit: 'Betreten',
       process: 'Versenden...'
     }
@@ -261,7 +276,8 @@ export default {
     title: 'Kontoverwaltung',
     email: {
       title: 'Email',
-      desription: 'Verwalten von E-Mails, die mit Ihrem SOURCECHANGER-Konto verknüpft sind',
+      desription:
+        'Verwalten von E-Mails, die mit Ihrem SOURCECHANGER-Konto verknüpft sind',
       buttons: {
         change: {
           name: 'Ändern'
@@ -270,7 +286,8 @@ export default {
     },
     password: {
       title: 'Passwort',
-      desription: 'Verwalten des Passworts, das für die Anmeldung bei Ihrem SOURCECHANGER-Konto erforderlich ist',
+      desription:
+        'Verwalten des Passworts, das für die Anmeldung bei Ihrem SOURCECHANGER-Konto erforderlich ist',
       inputs: {
         oldPassword: {
           placeholder: 'Altes Passwort'
@@ -292,4 +309,4 @@ export default {
       }
     }
   }
-}
+};

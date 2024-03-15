@@ -4,20 +4,10 @@
   "rootDir": "./src",
   "compilerOptions": {
     "paths": {
-      "@request": [
-        "./src/common/request.ts"
-      ],
-      "@": [
-        "./src"
-      ],
-      "@/*": [
-        "./src/*"
-      ],
+      "@request": ["./src/common/request.ts"],
+      "@": ["./src"],
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "env.d.ts",
-    ".nuxt/nuxt.d.ts",
-    "**/*"
-  ]
+  "include": ["env.d.ts", ".nuxt/nuxt.d.ts", "**/*"]
 }

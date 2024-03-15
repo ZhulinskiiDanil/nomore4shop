@@ -1,15 +1,17 @@
 <template>
-  <label :class="[
-    $style.switcher,
-    $style[theme],
-    palindrome && $style.palindrome
-  ]">
+  <label
+    :class="[
+      $style.switcher,
+      $style[theme],
+      palindrome && $style.palindrome
+    ]"
+  >
     <input
-      @change="test"
       type="checkbox"
       :disabled="!!disabled"
       :checked="!!checked"
       hidden
+      @change="test"
     />
     <div :class="$style.circle">
       <slot name="icon"></slot>
@@ -18,27 +20,27 @@
 </template>
 
 <script setup lang="ts">
-  import type { UIKitElementTheme } from '../types';
-  import { uiConfig } from '../ui.config';
+import type { UIKitElementTheme } from '../types';
+import { uiConfig } from '../ui.config';
 
-  const emit = defineEmits(['change'])
-  const slots = defineSlots<{ icon(props: any): any }>()
-  const props = defineProps<{
-    theme?: UIKitElementTheme
-    disabled?: boolean
-    checked?: boolean
-    palindrome?: boolean
-  }>()
+defineSlots<{ icon(props: any): any }>();
+const emit = defineEmits(['change']);
+const props = defineProps<{
+  theme?: UIKitElementTheme;
+  disabled?: boolean;
+  checked?: boolean;
+  palindrome?: boolean;
+}>();
 
-  const theme = ref(
-    props.theme || uiConfig.getTheme?.() || 'light'
-  )
+const theme = ref(
+  props.theme || uiConfig.getTheme?.() || 'light'
+);
 
-  function test(e: Event) {
-    const target = e.target as HTMLInputElement | null
+function test(e: Event) {
+  const target = e.target as HTMLInputElement | null;
 
-    emit('change', !!target?.checked)
-  }
+  emit('change', !!target?.checked);
+}
 </script>
 
 <style lang="scss" src="./Switcher.module.scss" module></style>

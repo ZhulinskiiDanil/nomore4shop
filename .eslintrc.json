@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "@nuxt",
+    "plugin:prettier/recommended",
+    "prettier"
+  ], // The same as "@nuxt/eslint-config", "plugin:eslint-plugin-prettier/recommended", "eslint-config-prettier"
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-unused-vars": "off"
+  }
+}

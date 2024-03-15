@@ -10,11 +10,11 @@
     /* 104.545% */
     letter-spacing: 0.00625rem;
 
-    [data-type~=red] {
-      color: #FF6D6D;
+    [data-type~='red'] {
+      color: #ff6d6d;
     }
 
-    [data-type~=bold] {
+    [data-type~='bold'] {
       font-weight: 700;
     }
   }

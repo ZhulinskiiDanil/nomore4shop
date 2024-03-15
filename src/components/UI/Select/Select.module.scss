@@ -8,7 +8,7 @@
   line-height: 120%; /* 19.2px */
   cursor: pointer;
 
-  font-size: .8rem;
+  font-size: 0.8rem;
 
   &.active {
     z-index: 1;
@@ -41,7 +41,7 @@
     -webkit-user-drag: none;
 
     .arrow {
-      transition: .15s ease;
+      transition: 0.15s ease;
 
       [fill] {
         fill: #fff;
@@ -66,13 +66,13 @@
     opacity: 0;
 
     .option {
-      padding: .6rem .8rem;
+      padding: 0.6rem 0.8rem;
       color: #000;
       line-height: 120%;
       /* 19.2px */
       z-index: 1;
       flex-shrink: 0;
-      transition: .15s ease;
+      transition: 0.15s ease;
       cursor: pointer;
 
       user-select: none;
@@ -80,7 +80,7 @@
 
       &.active,
       &:hover {
-        color: #B2B6FF;
+        color: #b2b6ff;
       }
     }
   }

@@ -7,7 +7,7 @@ export default {
     bots: {
       tg: 'robot de telegrama',
       vk: 'Robot en VK'
-    },
+    }
   },
   links: {
     home: 'Hogar',
@@ -16,18 +16,21 @@ export default {
   },
   errors: {
     auth: {
-      INVALID_LOGIN: "Ingreso invalido",
-      INVALID_PASSWORD: "Contraseña incorrecta",
-      INVALID_CREDENTIALS: "Información incorrecta",
-      TO_MANY_REQUESTS: "Estás enviando demasiadas solicitudes, espera un momento.",
-      INVALID_EMAIL: "Неверный e-mail",
-      EMAIL_NOT_FOUND: "No hay ningún usuario con este correo electrónico",
-      INVALID_CAPTCHA: "Captcha inválido",
-      LOGIN_EXISTS: "Ya existe un usuario con este login",
-      EMAIL_EXISTS: "Un usuario con este correo electrónico ya está registrado",
-      PASSWORD_REPEAT_MISMATCH: "Contraseña no coincide",
-      INVALID_RESPONSE: "Error del Servidor",
-      INVALID_CODE: "Código incorrecto"
+      INVALID_LOGIN: 'Ingreso invalido',
+      INVALID_PASSWORD: 'Contraseña incorrecta',
+      INVALID_CREDENTIALS: 'Información incorrecta',
+      TO_MANY_REQUESTS:
+        'Estás enviando demasiadas solicitudes, espera un momento.',
+      INVALID_EMAIL: 'Неверный e-mail',
+      EMAIL_NOT_FOUND:
+        'No hay ningún usuario con este correo electrónico',
+      INVALID_CAPTCHA: 'Captcha inválido',
+      LOGIN_EXISTS: 'Ya existe un usuario con este login',
+      EMAIL_EXISTS:
+        'Un usuario con este correo electrónico ya está registrado',
+      PASSWORD_REPEAT_MISMATCH: 'Contraseña no coincide',
+      INVALID_RESPONSE: 'Error del Servidor',
+      INVALID_CODE: 'Código incorrecto'
     }
   },
   notifications: {
@@ -47,15 +50,18 @@ export default {
       },
       invalidEmail: {
         // notifications.error.title
-        description: 'Por favor ingrese el correo electrónico correcto'
+        description:
+          'Por favor ingrese el correo electrónico correcto'
       },
       successEmailSending: {
         // notifications.default.title
-        description: 'Hemos enviado una carta a su correo electrónico.'
+        description:
+          'Hemos enviado una carta a su correo electrónico.'
       },
       emailServerError: {
         // notifications.error.title
-        description: 'Error del servidor, no se pudo enviar el correo electrónico a su correo electrónico'
+        description:
+          'Error del servidor, no se pudo enviar el correo electrónico a su correo electrónico'
       },
       resetPasswordSuccess: {
         // notifications.default.title
@@ -63,7 +69,8 @@ export default {
       },
       resetPasswordError: {
         // notifications.serverError.title
-        description: 'Error del servidor, no se pudo cambiar la contraseña'
+        description:
+          'Error del servidor, no se pudo cambiar la contraseña'
       }
     }
   },
@@ -108,7 +115,8 @@ export default {
     },
     mainSection: {
       title: 'Cambiador legítimo gratuito para juegos populares',
-      description: 'Crea una nueva experiencia visual en juegos CS2, etc.',
+      description:
+        'Crea una nueva experiencia visual en juegos CS2, etc.',
       button: {
         name: 'Intentalo'
       }
@@ -122,11 +130,13 @@ export default {
     features: [
       {
         title: 'Pieles',
-        description: 'La importancia de estos problemas es tan obvia que la implementación de los objetivos planificados juega un papel importante en la formación de un sistema de formación de personal y satisface necesidades urgentes.'
+        description:
+          'La importancia de estos problemas es tan obvia que la implementación de los objetivos planificados juega un papel importante en la formación de un sistema de formación de personal y satisface necesidades urgentes.'
       },
       {
         title: 'Efectos',
-        description: 'La importancia de estos problemas es tan obvia que la implementación de los objetivos planificados juega un papel importante en la formación de un sistema de formación de personal y satisface necesidades urgentes.'
+        description:
+          'La importancia de estos problemas es tan obvia que la implementación de los objetivos planificados juega un papel importante en la formación de un sistema de formación de personal y satisface necesidades urgentes.'
       }
     ],
     tryNow: {
@@ -210,14 +220,15 @@ export default {
         title: 'Confirmación de registro'
       },
       title: 'Confirmacion de cuenta',
-      description: 'Para confirmar envía este código a nuestro bot de Telegram o VK',
+      description:
+        'Para confirmar envía este código a nuestro bot de Telegram o VK',
       submit: 'Confirmé para continuar'
     },
     restorePassword: {
       seo: {
-        title: 'Recuperación de contraseña\''
+        title: "Recuperación de contraseña'"
       },
-      title: 'Recuperación de contraseña\'',
+      title: "Recuperación de contraseña'",
       inputs: {
         email: {
           title: 'EMAIL',
@@ -229,10 +240,11 @@ export default {
     },
     resetPassword: {
       seo: {
-        title: 'Recuperación de contraseña\''
+        title: "Recuperación de contraseña'"
       },
-      title: 'Recuperación de contraseña\'',
-      success: 'Restablecimiento de contraseña exitoso. Se ha enviado una nueva contraseña a su correo electrónico.',
+      title: "Recuperación de contraseña'",
+      success:
+        'Restablecimiento de contraseña exitoso. Se ha enviado una nueva contraseña a su correo electrónico.',
       submit: 'Entrar',
       process: 'Despacho...'
     }
@@ -261,7 +273,8 @@ export default {
     title: 'Administración de cuentas',
     email: {
       title: 'Email',
-      desription: 'Administrar el correo vinculado a su cuenta SOURCECHANGER',
+      desription:
+        'Administrar el correo vinculado a su cuenta SOURCECHANGER',
       buttons: {
         change: {
           name: 'Cambiar'
@@ -270,7 +283,8 @@ export default {
     },
     password: {
       title: 'Contraseña',
-      desription: 'Administrar la contraseña necesaria para iniciar sesión en su cuenta SOURCECHANGER',
+      desription:
+        'Administrar la contraseña necesaria para iniciar sesión en su cuenta SOURCECHANGER',
       inputs: {
         oldPassword: {
           placeholder: 'Contraseña anterior'
@@ -292,4 +306,4 @@ export default {
       }
     }
   }
-}
+};

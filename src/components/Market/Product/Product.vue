@@ -31,12 +31,12 @@
 </template>
 
 <script setup lang="ts">
-  import type { Product } from '@/ts/market'
-  import { utils } from '@/common/utils'
-  
-  defineProps<{
-    data: Product
-  }>()
+import type { Product } from '@/ts/market';
+import { utils } from '@/common/utils';
+
+defineProps<{
+  data: Product;
+}>();
 </script>
 
 <style lang="scss" src="./Product.module.scss" module></style>

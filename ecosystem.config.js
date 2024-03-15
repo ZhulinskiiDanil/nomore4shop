@@ -8,6 +8,6 @@ module.exports = {
       // 'max' auto detects how many CPU cores there are.
       // The previous option must exist to use the above.
       script: '.output/server/index.mjs'
-    },
-  ],
-}
+    }
+  ]
+};

@@ -1,12 +1,13 @@
 <template>
-  <UIModal @hide="$emit('hide')" :visible="visible">
+  <UIModal :visible="visible" @hide="$emit('hide')">
     <div :class="$style.modal">
       <ModalTitle center>
         {{ title || 'Подтвердить действие' }}
       </ModalTitle>
       <div :class="$style.body">
-        <span 
+        <span
           v-for="text in body"
+          :key="text.content"
           :data-type="text.type"
         >
           {{ text.content }}&nbsp;
@@ -25,23 +26,26 @@
 </template>
 
 <script setup lang="ts">
-  const emit = defineEmits<{ hide: [], submit: [], cancel: [] }>()
-  const props = defineProps<{ 
-    visible?: boolean,
-    title?: string,
-    cancelTitle?: string,
-    submitTitle?: string,
-    body?: { content: string, type?: 'default' | 'red' | 'bold' }[]
-  }>()
+const emit = defineEmits<{ hide: []; submit: []; cancel: [] }>();
+defineProps<{
+  visible?: boolean;
+  title?: string;
+  cancelTitle?: string;
+  submitTitle?: string;
+  body?: {
+    content: string;
+    type?: 'default' | 'red' | 'bold';
+  }[];
+}>();
 
-  function submit() {
-    emit('submit')
-  }
+function submit() {
+  emit('submit');
+}
 
-  function cancel() {
-    emit('cancel')
-    emit('hide')
-  }
+function cancel() {
+  emit('cancel');
+  emit('hide');
+}
 </script>
 
 <style lang="scss" src="./Submit.module.scss" module></style>
