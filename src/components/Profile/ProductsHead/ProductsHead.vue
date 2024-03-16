@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.head">
     <div :class="$style.title">Ваши товары</div>
-    <UIButton uppercase> Добавить </UIButton>
+    <UIButton uppercase>Добавить</UIButton>
   </div>
 </template>
 

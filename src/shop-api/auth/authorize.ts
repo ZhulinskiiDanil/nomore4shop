@@ -1,13 +1,13 @@
 import { request } from '@request';
 
-import { ERROR_CODES } from '@/ts/errors';
+import { ErrorCodes } from '@/ts/errors';
 
 export interface ResponseResultSuccess {
   result: object;
 }
 
 export interface ResponseResultUnSuccess {
-  code: ERROR_CODES;
+  code: ErrorCodes;
 }
 
 export type ResponseResult = {
@@ -33,6 +33,6 @@ export async function authorize(): Promise<{
   return {
     authorized:
       response?.ok ||
-      response?.code === ERROR_CODES.USER_ALREADY_EXISTS
+      response?.code === ErrorCodes.USER_ALREADY_EXISTS
   };
 }

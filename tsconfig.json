@@ -3,6 +3,7 @@
   "extends": "./.nuxt/tsconfig.json",
   "rootDir": "./src",
   "compilerOptions": {
+    "moduleResolution": "node",
     "paths": {
       "@request": ["./src/common/request.ts"],
       "@": ["./src"],

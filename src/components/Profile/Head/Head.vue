@@ -5,7 +5,7 @@
       to="/profile/settings"
       :class="$style.settings"
     >
-      <UIButton uppercase mini> Настройки </UIButton>
+      <UIButton uppercase mini>Настройки</UIButton>
     </NuxtLink>
     <div v-if="avatarURL" :class="$style.avatar">
       <img :src="avatarURL" alt="Avatar" />

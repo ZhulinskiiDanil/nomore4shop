@@ -16,12 +16,16 @@
     <input
       :id="id"
       v-model="model"
+      v-maska
       :name="name"
       :type="type"
       :placeholder="placeholder || 'Placeholder'"
       :disabled="!!disabled"
       :readonly="!!readonly"
       :autocomplete="autocomplete"
+      :data-maska="dataMask"
+      :data-maska-tokens="dataMaskaTokens"
+      :data-maska-eager="dataMaskaEager"
       @keypress="
         (e: KeyboardEvent) => {
           if (numeric && !isNumeric(e.key)) {
@@ -60,6 +64,10 @@ const props = defineProps<{
   disabled?: boolean;
   readonly?: boolean;
   copied?: boolean;
+
+  dataMask?: string;
+  dataMaskaTokens?: string;
+  dataMaskaEager?: boolean;
 }>();
 
 const inputTheme = computed(

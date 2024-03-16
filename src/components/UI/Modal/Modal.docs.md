@@ -5,7 +5,7 @@
 > #### Icon required!
 
 ```html
-<UIModal> Тег курса </UIModal>
+<UIModal>Тег курса</UIModal>
 ```
 
 ### Modal "`prop:theme`"

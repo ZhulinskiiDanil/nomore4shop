@@ -9,7 +9,8 @@
 ### Switcher "`prop:theme`"
 
 ```html
-<UISwitcher theme="light" /> <-- Is default -->
+<UISwitcher theme="light" />
+<-- Is default -->
 <UISwitcher theme="dark" />
 ```
 

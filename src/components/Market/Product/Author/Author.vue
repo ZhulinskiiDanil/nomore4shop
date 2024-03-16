@@ -7,9 +7,11 @@
       {{ data.author.username }}
     </div>
     <div :class="$style.tools">
-      <UIButton v-if="canSendMessage" mini> Написать </UIButton>
-      <UIButton v-if="canEdit" mini> Редактировать </UIButton>
-      <UIButton v-if="canDelete" mini> Удалить </UIButton>
+      <UIButton v-if="canSendMessage" mini>Написать</UIButton>
+      <NuxtLink :href="`/market/${data.id}/edit`">
+        <UIButton v-if="canEdit" mini>Редактировать</UIButton>
+      </NuxtLink>
+      <UIButton v-if="canDelete" mini>Удалить</UIButton>
     </div>
   </div>
 </template>

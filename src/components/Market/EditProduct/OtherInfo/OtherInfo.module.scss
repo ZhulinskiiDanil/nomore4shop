@@ -1,0 +1,27 @@
+.stars {
+  display: flex;
+  align-items: center;
+
+  &:has(.star:hover) {
+    .star:hover,
+    .star:not(.star:hover ~ *) {
+      opacity: 0.8;
+    }
+  }
+
+  .star {
+    padding: 0 0.0625rem;
+    transition: 0.15s ease;
+    cursor: pointer;
+    opacity: 0.2;
+
+    [stroke]:not([stroke~='none']) {
+      stroke: $yellow20;
+    }
+
+    &.active {
+      opacity: 1 !important;
+      fill: $yellow20 !important;
+    }
+  }
+}

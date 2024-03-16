@@ -5,7 +5,8 @@
       <div :class="$style.subtitle">
         Мы очень рады нашей первой встречи, нажмите кнопку ниже
         чтобы начать использовать
-        <span data-accent>NoMore4Shop</span> :)
+        <span data-accent>NoMore4Shop</span>
+        :)
       </div>
     </div>
     <div :class="$style.end">

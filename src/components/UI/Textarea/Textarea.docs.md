@@ -9,7 +9,8 @@
 ### Input "`prop:theme`"
 
 ```html
-<UIInput theme="light" /> <-- Is default -->
+<UIInput theme="light" />
+<-- Is default -->
 <UIInput theme="dark" />
 ```
 
@@ -30,13 +31,15 @@
 ### Input "`prop:disabled`"
 
 ```html
-<UIInput :disabled="false" /> <-- Is default -->
+<UIInput :disabled="false" />
+<-- Is default -->
 <UIInput disabled />
 ```
 
 ### Input "`prop:readonly`"
 
 ```html
-<UIInput :readonly="false" /> <-- Is default -->
+<UIInput :readonly="false" />
+<-- Is default -->
 <UIInput readonly />
 ```

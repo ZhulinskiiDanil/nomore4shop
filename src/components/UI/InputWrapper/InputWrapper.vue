@@ -1,6 +1,6 @@
 <template>
-  <div :class="[$style.input, $style[theme]]">
-    <p :class="$style.title">
+  <div :class="$style.wrapper">
+    <p v-if="title || additional" :class="$style.title">
       <span data-main>
         {{ title }}
       </span>
@@ -8,7 +8,9 @@
         {{ additional }}
       </span>
     </p>
-    <slot></slot>
+    <div :class="$style.input">
+      <slot></slot>
+    </div>
     <div v-if="error" :class="$style.error">
       {{ error }}
     </div>
@@ -26,8 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { useTheme } from '@/hooks/useTheme';
-
+const localePath = useLocalePath();
 defineProps<{
   title?: string;
   additional?: string;
@@ -38,13 +39,10 @@ defineProps<{
     name: string;
   };
 }>();
-
-const localePath = useLocalePath();
-const { theme } = useTheme();
 </script>
 
 <style
   lang="scss"
-  src="./InputWithTitle.module.scss"
+  src="./InputWrapper.module.scss"
   module
 ></style>

@@ -23,10 +23,8 @@
       <MarketProductRow title="Размер:" value="42 - 43" />
     </div>
     <div :class="$style.buttons">
-      <UIButton uppercase fill> Написать продавцу </UIButton>
-      <UIButton uppercase fill>
-        Оплатить криптовалютой
-      </UIButton>
+      <UIButton uppercase fill>Написать продавцу</UIButton>
+      <UIButton uppercase fill>Оплатить криптовалютой</UIButton>
     </div>
   </div>
 </template>

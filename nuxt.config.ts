@@ -47,34 +47,9 @@ export default defineNuxtConfig({
     lazy: true,
     locales: [
       {
-        code: 'de',
-        file: 'de-DE/index.ts',
-        name: 'DE'
-      },
-      {
-        code: 'en',
-        file: 'en-EN/index.ts',
-        name: 'EN'
-      },
-      {
-        code: 'es',
-        file: 'es-ES/index.ts',
-        name: 'ES'
-      },
-      {
-        code: 'fr',
-        file: 'fr-FR/index.ts',
-        name: 'FR'
-      },
-      {
         code: 'ru',
         file: 'ru-RU/index.ts',
         name: 'RU'
-      },
-      {
-        code: 'uk',
-        file: 'uk-UK/index.ts',
-        name: 'UK'
       }
     ]
   }

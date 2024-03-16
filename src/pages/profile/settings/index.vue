@@ -18,7 +18,7 @@
         <div :class="$style.row">
           <div :class="$style.content">
             <div :class="$style.title">Telegram</div>
-            <UIButton disabled> nomore4krab </UIButton>
+            <UIButton disabled>nomore4krab</UIButton>
           </div>
         </div>
         <div :class="$style.row">
@@ -44,7 +44,7 @@
               placeholder="Instagram..."
               fill
             />
-            <UIButton fill uppercase> Подтвердить </UIButton>
+            <UIButton fill uppercase>Подтвердить</UIButton>
           </div>
         </div>
       </div>

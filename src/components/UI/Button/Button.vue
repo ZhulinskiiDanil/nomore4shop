@@ -4,7 +4,7 @@
     :class="[
       $style.button,
       $style[buttonTheme],
-      $style[buttonType],
+      $style[buttonVariant],
       red && $style.red,
       fill && $style.fill,
       hovered && $style.hovered,
@@ -25,11 +25,11 @@
 <script setup lang="ts">
 import { uiConfig } from '../ui.config';
 import type { UIKitElementTheme } from '../types';
-import type { ButtonType } from './types';
+import type { ButtonVariant } from './types';
 
 defineSlots();
 const props = defineProps<{
-  type?: ButtonType;
+  variant?: ButtonVariant;
   theme?: UIKitElementTheme;
   mini?: boolean;
   uppercase?: boolean;
@@ -43,7 +43,7 @@ const props = defineProps<{
 }>();
 
 const buttonRef = ref<HTMLButtonElement | null>(null);
-const buttonType = computed(() => props.type || 'default');
+const buttonVariant = computed(() => props.variant || 'default');
 const buttonTheme = computed(
   () => props.theme || uiConfig?.getTheme?.().value || 'light'
 );

@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.price">
-    <span> СТОИМОСТЬ </span>
-    <span> {{ amount }} USDT </span>
+    <span>СТОИМОСТЬ</span>
+    <span>{{ amount }} USDT</span>
   </div>
 </template>
 
