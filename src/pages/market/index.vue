@@ -5,7 +5,7 @@
         v-if="index % 3 === 0"
         type="channel"
       />
-      <MarketProduct :data="product" />
+      <WidgetsProduct :data="product" />
     </div>
   </div>
 </template>

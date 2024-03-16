@@ -4,13 +4,13 @@
       <img :src="currImage" alt="Photo" />
     </div>
     <div :class="$style.end">
-      <UIButton type="stroked" mini @click="prev">
+      <UIButton variant="stroked" mini @click="prev">
         &leftarrow;
       </UIButton>
       <div :class="$style.count">
         {{ currImageIndex + 1 }}/{{ imageURLS.length }}
       </div>
-      <UIButton type="stroked" mini @click="next">
+      <UIButton variant="stroked" mini @click="next">
         &rightarrow;
       </UIButton>
     </div>

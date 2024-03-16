@@ -10,7 +10,7 @@
     <ProfileSocials />
     <ProfileProductsHead />
     <div :class="$style.list">
-      <MarketProduct
+      <WidgetsProduct
         v-for="product of products"
         :key="product.id"
         :data="product"
