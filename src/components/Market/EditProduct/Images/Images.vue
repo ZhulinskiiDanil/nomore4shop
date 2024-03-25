@@ -13,7 +13,12 @@
       @mouseleave="uploadHovered = false"
       @touchend="uploadHovered = false"
     >
-      <input type="file" hidden @change="changeFile" />
+      <input
+        type="file"
+        hidden
+        @change="changeFile"
+        accept="image/png, image/gif, image/jpeg"
+      />
       <UIButton
         type="button"
         style="pointer-events: none"
@@ -53,6 +58,8 @@ async function changeFile(event: Event) {
   const e = event as ChangeEvent<HTMLInputElement>;
 
   if (e.target.files) {
+    if (!e.target.files[0].type.startsWith('image/')) return;
+
     const base64 = await $utils.file.getBase64(
       e.target.files[0]
     );
