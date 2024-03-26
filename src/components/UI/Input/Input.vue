@@ -13,6 +13,9 @@
       type === 'password' && $style.password
     ]"
   >
+    <div :class="$style.icon">
+      <slot name="before-icon"></slot>
+    </div>
     <input
       :id="id"
       v-model="model"
@@ -36,6 +39,9 @@
         }
       "
     />
+    <div :class="$style.icon">
+      <slot name="after-icon"></slot>
+    </div>
   </label>
 </template>
 
@@ -43,11 +49,21 @@
 import type { UIKitElementTheme } from '../types';
 import { uiConfig } from '../ui.config';
 
+defineSlots<{ 'before-icon': []; 'after-icon': [] }>();
 defineEmits<{
   buttonClick: [];
   copy: [text: string];
 }>();
-const model = defineModel<string>();
+const [model, modifiers] = defineModel<string | number>({
+  get(value) {
+    if (modifiers['force-number']) {
+      console.log($vue.modelModifiers.forceNumberGet(value));
+      return $vue.modelModifiers.forceNumberGet(value);
+    } else {
+      return value;
+    }
+  }
+});
 const props = defineProps<{
   id?: string;
   name?: string;

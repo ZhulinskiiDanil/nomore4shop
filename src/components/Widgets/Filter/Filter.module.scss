@@ -1,0 +1,45 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+
+  background: $dark10;
+
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    hr {
+      width: 2rem;
+      height: 0.1rem;
+
+      border: none;
+      background: $yellow20;
+    }
+  }
+
+  &:has(.star:hover) {
+    .star:hover,
+    .star:not(.star:hover ~ *) {
+      opacity: 0.8;
+    }
+  }
+
+  .star {
+    padding: 0 0.0625rem;
+    transition: 0.15s ease;
+    cursor: pointer;
+    opacity: 0.2;
+
+    [stroke]:not([stroke~='none']) {
+      stroke: $yellow20;
+    }
+
+    &.active {
+      opacity: 1 !important;
+      fill: $yellow20 !important;
+    }
+  }
+}

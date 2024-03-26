@@ -1,19 +1,41 @@
 <template>
-  <div :class="$style.products">
-    <div v-for="(product, index) of products" :key="product.id">
-      <MarketProductAdvertising
-        v-if="index % 3 === 0"
-        type="channel"
-      />
-      <WidgetsProduct :data="product" />
+  <div>
+    <div :class="$style.products">
+      <div
+        v-for="(product, index) of products"
+        :key="product.id"
+      >
+        <MarketProductAdvertising
+          v-if="index % 3 === 0"
+          type="channel"
+        />
+        <WidgetsProduct :data="product" />
+      </div>
     </div>
+    <EntitiesMarketFilterWrapper v-model:visible="filterVisible">
+      <WidgetsFilter
+        v-model="filter"
+        v-model:visible="filterVisible"
+        @submit="console.log('Submit filter.')"
+      />
+    </EntitiesMarketFilterWrapper>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ProductState } from '@/ts/market';
-import type { Product } from '@/ts/market';
+import type { FilterData, Product } from '@/ts/market';
 
+const filterVisible = ref(false);
+const filter = reactive<FilterData>({
+  search: '',
+  state: ProductState.USED,
+  stateGrade: 1,
+  price: {
+    min: 0,
+    max: 0
+  }
+});
 const products = ref<Product[]>([
   {
     id: '1',

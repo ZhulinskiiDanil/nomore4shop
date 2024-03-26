@@ -1,5 +1,15 @@
 import type { PublicUser } from '../user';
 
+export type FilterData = {
+  search: string;
+  state: ProductState;
+  stateGrade: number;
+  price: {
+    min: number;
+    max: number;
+  };
+};
+
 export type Product = {
   id: string;
   createdAt: string;
