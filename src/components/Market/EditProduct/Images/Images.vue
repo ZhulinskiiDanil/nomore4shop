@@ -16,8 +16,8 @@
       <input
         type="file"
         hidden
-        @change="changeFile"
         accept="image/png, image/gif, image/jpeg"
+        @change="changeFile"
       />
       <UIButton
         type="button"
