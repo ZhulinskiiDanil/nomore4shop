@@ -2,8 +2,6 @@ export function isSuccess<T>(
   value: unknown
 ): value is SuccessResponse<T> {
   return (
-    value instanceof Object &&
-    'success' in value &&
-    'data' in value
+    value instanceof Object && 'ok' in value && 'result' in value
   );
 }

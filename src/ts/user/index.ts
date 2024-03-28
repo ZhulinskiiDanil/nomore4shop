@@ -1,16 +1,19 @@
 export type User = {
-  id: string;
+  id: number;
+  chatId: number;
   tgId: number;
   username: string;
-  avatarURL: string;
+  firstname: string;
+  avatar: string | null;
   balance: number;
 
-  telegram: string;
-  instagram: string;
-  description: string;
+  instagram: string | null;
+  description: string | null;
+
+  createdAt: string;
+  updatedAt: string;
+  verifiedSeller: boolean;
 };
 
-export type PublicUser = Pick<
-  User,
-  'id' | 'tgId' | 'username' | 'avatarURL'
->;
+export type PublicUser = Partial<User> &
+  Pick<User, 'id' | 'tgId' | 'username' | 'avatar'>;

@@ -7,8 +7,8 @@
     >
       <UIButton uppercase mini>Настройки</UIButton>
     </NuxtLink>
-    <div v-if="avatarURL" :class="$style.avatar">
-      <img :src="avatarURL" alt="Avatar" />
+    <div v-if="avatar" :class="$style.avatar">
+      <img :src="avatar" alt="Avatar" />
     </div>
     <div v-if="title" :class="$style.title">
       {{ title }}
@@ -23,11 +23,13 @@
 </template>
 
 <script setup lang="ts">
+import type { User } from '@/ts';
+
 defineProps<{
-  avatarURL?: string;
   title?: string;
-  username?: string;
-  description?: string;
+  avatar?: User['avatar'];
+  username?: User['username'];
+  description?: User['description'];
 }>();
 </script>
 

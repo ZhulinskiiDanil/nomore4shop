@@ -19,7 +19,7 @@ useHead({
   ]
 });
 
-// await useProfile({ prefetch: true })
+useProfile({ prefetch: true });
 </script>
 
 <style lang="scss" scope>

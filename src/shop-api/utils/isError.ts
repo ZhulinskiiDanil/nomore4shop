@@ -9,7 +9,7 @@ export function isError<T = unknown>(
 ): value is GetErrorResponseFrom<T> {
   return (
     value instanceof Object &&
-    'error' in value &&
-    'errorCode' in value
+    'ok' in value &&
+    'code' in value
   );
 }
