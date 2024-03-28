@@ -11,17 +11,20 @@ export type FilterData = {
 };
 
 export type Product = {
-  id: string;
+  id: number;
+  userId: number;
   createdAt: string;
   updatedAt: string;
   deletedAt: string | null;
 
   title: string;
   description: string;
-  author: PublicUser;
+  user: PublicUser;
   imageURLS: string[];
   price: number;
 
+  deleted: boolean;
+  sold: boolean;
   state: ProductState;
   stateGrade: number; // 1 - 10
   size: string;

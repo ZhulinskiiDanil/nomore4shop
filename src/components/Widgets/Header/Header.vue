@@ -18,7 +18,7 @@
           {{ formatBalance(profile.balance) }}
         </div>
         <div :class="$style.avatar">
-          <img :src="avatar || ''" alt="Avatar" />
+          <img :src="avatar" alt="Avatar" />
         </div>
       </div>
     </NuxtLink>
@@ -26,11 +26,8 @@
 </template>
 
 <script setup lang="ts">
-const defaultAvatar = useDefaultAvatar();
 const { profile } = useProfile();
-const avatar = computed(
-  () => profile.value?.avatar || defaultAvatar
-);
+const avatar = useAvatar(profile);
 
 const formatBalance = (n: number) => {
   return n.toLocaleString('ru', {

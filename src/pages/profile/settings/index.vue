@@ -2,7 +2,7 @@
   <div v-if="profile" :class="$style.container">
     <ProfileHead
       title="Настройки профиля"
-      :username="`@${profile.username}`"
+      :username="`@${profile?.username}`"
     />
     <div :class="$style.list">
       <div :class="$style.cell">

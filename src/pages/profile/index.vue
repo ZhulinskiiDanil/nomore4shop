@@ -11,9 +11,9 @@
     <ProfileBalance />
     <ProfileSocials />
     <ProfileProductsHead />
-    <div :class="$style.list">
+    <div v-if="productsResponse" :class="$style.list">
       <WidgetsProduct
-        v-for="product of products"
+        v-for="product of productsResponse.products"
         :key="product.id"
         :data="product"
       />
@@ -22,56 +22,16 @@
 </template>
 
 <script setup lang="ts">
-import { ProductState } from '@/ts/market';
-import type { Product } from '@/ts/market';
-
-const defaultAvatar = useDefaultAvatar();
 const { profile } = useProfile();
-const avatar = computed(
-  () => profile.value?.avatar || defaultAvatar
+const { data: productsResponse } = useAsyncData(
+  'products',
+  async () =>
+    await $api.profile.getProducts({ offset: 30, page: 1 }),
+  {
+    server: false
+  }
 );
-const products = computed<Product[]>(() =>
-  profile.value
-    ? [
-        {
-          id: '1',
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          deletedAt: new Date().toISOString(),
-          title: 'Test title',
-          description: 'Test description',
-          state: ProductState.NEW,
-          stateGrade: 1,
-          size: 'M',
-          price: 100,
-          imageURLS: [
-            'https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg',
-            'https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg',
-            'https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg'
-          ],
-          author: profile.value
-        },
-        {
-          id: '2',
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          deletedAt: new Date().toISOString(),
-          title: 'Test title',
-          description: 'Test description',
-          state: ProductState.NEW,
-          stateGrade: 1,
-          size: 'M',
-          price: 100,
-          imageURLS: [
-            'https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg',
-            'https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg',
-            'https://friendfunction.ru/upload/iblock/070/z6y5xr0kqlyb7td44tflvjh270yl009g/shapka_carhartt_wip_blizzard_beanie_ash_heather_1.jpg'
-          ],
-          author: profile.value
-        }
-      ]
-    : []
-);
+const avatar = useAvatar(profile);
 </script>
 
 <style lang="scss" src="./index.module.scss" module></style>

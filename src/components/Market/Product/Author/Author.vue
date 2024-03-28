@@ -1,10 +1,10 @@
 <template>
   <div :class="$style.author">
     <div :class="$style.avatar">
-      <img :src="data.author.avatarURL" alt="Avatar" />
+      <img :src="avatar" alt="Avatar" />
     </div>
     <div :class="$style.username">
-      {{ data.author.username }}
+      {{ data.user.username }}
     </div>
     <div :class="$style.tools">
       <UIButton v-if="canSendMessage" mini>Написать</UIButton>
@@ -19,9 +19,9 @@
 <script setup lang="ts">
 import type { Product } from '@/ts/market';
 
-defineProps<{
-  data: Product;
-}>();
+const props = defineProps<{ data: Product }>();
+
+const avatar = useAvatar(props.data.user);
 
 const canSendMessage = ref(false);
 const canEdit = ref(true);

@@ -1,10 +1,9 @@
 export type User = {
   id: number;
   chatId: number;
-  tgId: number;
   username: string;
   firstname: string;
-  avatar: string | null;
+  lastname: string;
   balance: number;
 
   instagram: string | null;
@@ -16,4 +15,4 @@ export type User = {
 };
 
 export type PublicUser = Partial<User> &
-  Pick<User, 'id' | 'tgId' | 'username' | 'avatar'>;
+  Pick<User, 'id' | 'username' | 'verifiedSeller'>;

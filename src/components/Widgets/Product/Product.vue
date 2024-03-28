@@ -28,7 +28,8 @@
         {{ data.price }} USD
       </div>
       <div :class="$style.convertedPrice">
-        {{ data.price }} USD ~ 2000 UAH
+        {{ formatCurrency(data.price) }} ~
+        {{ formatCurrency(data.price * 39, 'UAH') }}
       </div>
     </div>
   </div>
@@ -38,6 +39,14 @@
 import type { Product } from '@/ts/market';
 
 defineProps<{ data: Product }>();
+
+function formatCurrency(n: number, currency: string = 'USD') {
+  return n.toLocaleString('en', {
+    style: 'currency',
+    currency,
+    currencyDisplay: 'symbol'
+  });
+}
 </script>
 
 <style lang="scss" src="./Product.module.scss" module></style>
