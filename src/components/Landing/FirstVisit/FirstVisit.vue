@@ -6,18 +6,15 @@
         Мы очень рады нашей первой встречи, нажмите кнопку ниже
         чтобы начать использовать
         <span data-accent>NoMore4Shop</span>
-        :)
+        :{{ ')' }}
       </div>
     </div>
     <div :class="$style.end">
-      <UIButton
-        :disabled="!data"
-        uppercase
-        fill
-        @click="authorize"
-      >
-        Начать использовать
-      </UIButton>
+      <NuxtLink href="/market">
+        <UIButton :disabled="!data" uppercase fill>
+          Начать использовать
+        </UIButton>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -25,40 +22,22 @@
 <script setup lang="ts">
 const data = ref<null | string>(null);
 
-async function authorize() {
-  const response = await $api.auth.authorize();
-
-  if (response.authorized) {
-    await navigateTo('/market', {
-      external: true
-    });
-
-    return true;
-  }
-
-  return false;
-}
-
 onMounted(async () => {
-  const response = await authorize();
+  const { useWebApp } = await import('vue-tg');
+  const { initData } = useWebApp();
 
-  if (!response) {
-    const { useWebApp } = await import('vue-tg');
-    const { initData } = useWebApp();
+  const payload = Object.fromEntries(
+    new URLSearchParams(initData).entries()
+  ) as unknown as { user?: string };
+  const token = useCookie('token', {
+    maxAge: 60 * 60 * 24
+  });
 
-    const payload = Object.fromEntries(
-      new URLSearchParams(initData).entries()
-    ) as unknown as { user?: string };
-    const token = useCookie('token', {
-      maxAge: 60 * 60 * 24
-    });
-
-    if (payload?.user) {
-      token.value = initData;
-    }
-
-    data.value = initData;
+  if (payload?.user) {
+    token.value = initData;
   }
+
+  data.value = initData;
 });
 </script>
 

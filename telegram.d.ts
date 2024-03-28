@@ -158,7 +158,3 @@ type TelegramApp = {
 };
 
 declare const Telegram: TelegramApp | undefined;
-
-declare const a: string;
-
-window.a = 1;
