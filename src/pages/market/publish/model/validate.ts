@@ -1,4 +1,5 @@
 import { ErrorCodes } from '@/ts/errors';
+import { ProductState } from '@/ts/market';
 
 import useVuelidate from '@vuelidate/core';
 import {
@@ -50,6 +51,10 @@ export const withValidate = () => {
     value: 0,
     error: null as FieldError
   });
+  const productState = reactive({
+    value: ProductState.NEW,
+    error: null as FieldError
+  });
   const size = reactive({
     value: '',
     error: null as FieldError
@@ -57,10 +62,6 @@ export const withValidate = () => {
   const rate = reactive({
     value: 1,
     error: null as FieldError
-  });
-
-  watch(price, () => {
-    price.value = price.value.match(/\d/g)?.join('') || '';
   });
 
   const rules = computed(() => ({
@@ -79,6 +80,7 @@ export const withValidate = () => {
       minValue: wm(invalidPriceMinValue, minValue(5)),
       maxValue: wm(invalidPriceMaxValue, maxValue(999999))
     },
+    productState: {},
     size: {
       required: wm(requiredField, required),
       minLength: wm(invalidSizeMinLength, minLength(1)),
@@ -86,7 +88,7 @@ export const withValidate = () => {
     },
     rate: {
       minValue: minValue(1),
-      maxValue: minValue(10)
+      maxValue: maxValue(10)
     }
   }));
 
@@ -94,8 +96,9 @@ export const withValidate = () => {
     title: toRef(title, 'value'),
     description: toRef(description, 'value'),
     price: toRef(price, 'value'),
-    rate: toRef(rate, 'value'),
-    size: toRef(size, 'value')
+    productState: toRef(productState, 'value'),
+    size: toRef(size, 'value'),
+    rate: toRef(rate, 'value')
   });
 
   return {
@@ -103,6 +106,7 @@ export const withValidate = () => {
       title,
       description,
       price,
+      productState,
       size,
       rate
     },

@@ -1,7 +1,7 @@
 <template>
   <MarketEditProductRow title="Доп. информация">
     <UIInputWrapper title="Размер" :error="sizeError">
-      <UIInput v-model="modelSize" fill placeholder="M" />
+      <UIInput v-model="size" fill placeholder="M" />
     </UIInputWrapper>
     <UIInputWrapper title="Состояние">
       <UITab fill>
@@ -27,7 +27,7 @@
           v-for="(_, index) of 10"
           :key="index"
           :class="[$style.star, rate > index && $style.active]"
-          @click="$emit('rate', index + 1)"
+          @click="rate = index + 1"
         />
       </div>
     </UIInputWrapper>
@@ -37,18 +37,14 @@
 <script setup lang="ts">
 import { ProductState } from '@/ts/market';
 
-const modelSize = defineModel<string>('size');
+const size = defineModel<string>('size');
 const productState = defineModel<ProductState>('productState', {
   default: ProductState.USED
 });
+const rate = defineModel<number>('rate', { default: 1 });
 defineProps<{
-  rate: number;
   error?: string | null;
   sizeError?: string | null;
-}>();
-defineEmits<{
-  rate: [rate: number];
-  'update:productState': [productState: ProductState];
 }>();
 </script>
 

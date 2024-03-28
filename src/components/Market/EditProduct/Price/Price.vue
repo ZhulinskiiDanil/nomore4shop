@@ -23,6 +23,11 @@ const model = defineModel<string | number>({
     } else {
       return parsedValue.toLocaleString('ru', {});
     }
+  },
+  set(value) {
+    const parsed = parseFloat(value.toString());
+
+    return isNaN(parsed) ? 0 : parsed;
   }
 });
 defineProps<{ error?: string | null }>();
