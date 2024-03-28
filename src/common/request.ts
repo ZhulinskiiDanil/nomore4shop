@@ -1,9 +1,14 @@
+import type { ErrorCodes } from '@/ts/errors';
+
 type FetchOptions = Parameters<typeof $fetch>['1'];
 
-export const request = async <T = any>(
+export const request = async <
+  T = unknown,
+  ECodes extends ErrorCodes = ErrorCodes
+>(
   path: string,
   opts?: FetchOptions
-): Promise<T | null> => {
+): Promise<MixedResponse<T, ECodes> | null> => {
   const baseURL = useApiBaseURL();
   const options = opts || {};
   const token = useCookie('token');
@@ -20,7 +25,7 @@ export const request = async <T = any>(
   try {
     return new Promise((res) => {
       $fetch(path, options)
-        .then((data) => res(data as T))
+        .then((data) => res(data as MixedResponse<T, ECodes>))
         .catch(() => res(null));
     });
   } catch (err) {

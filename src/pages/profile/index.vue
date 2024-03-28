@@ -8,6 +8,8 @@
     />
     <ProfileBalance />
     <ProfileSocials />
+    das
+    {{ profile?.id }}
     <ProfileProductsHead />
     <div :class="$style.list">
       <WidgetsProduct
@@ -22,6 +24,10 @@
 <script setup lang="ts">
 import { ProductState } from '@/ts/market';
 import type { Product } from '@/ts/market';
+
+const { data: profile } = useAsyncData(
+  async () => await $api.profile.getProfile()
+);
 
 const products = ref<Product[]>([
   {
