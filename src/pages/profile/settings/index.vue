@@ -1,8 +1,8 @@
 <template>
-  <div :class="$style.container">
+  <div v-if="profile" :class="$style.container">
     <ProfileHead
       title="Настройки профиля"
-      username="@nomore4krab"
+      :username="`@${profile.username}`"
     />
     <div :class="$style.list">
       <div :class="$style.cell">
@@ -18,7 +18,7 @@
         <div :class="$style.row">
           <div :class="$style.content">
             <div :class="$style.title">Telegram</div>
-            <UIButton disabled>nomore4krab</UIButton>
+            <UIButton disabled>{{ profile.username }}</UIButton>
           </div>
         </div>
         <div :class="$style.row">
@@ -44,7 +44,14 @@
               placeholder="Instagram..."
               fill
             />
-            <UIButton fill uppercase>Подтвердить</UIButton>
+            <UIButton
+              fill
+              uppercase
+              :disabled="instagramUploading"
+              @click="changeInstagram"
+            >
+              Подтвердить
+            </UIButton>
           </div>
         </div>
       </div>
@@ -53,9 +60,58 @@
 </template>
 
 <script setup lang="ts">
-const description = ref('');
+const { profile, loadProfile } = useProfile();
+
 const instagram = ref('');
+const instagramUploading = ref(false);
 const instagramFormVisible = ref(false);
+const description = ref('');
+
+async function changeDescription() {
+  const response = await $api.profile.changeDescription({
+    description: description.value
+  });
+
+  if (
+    $api.utils.isSuccess(response) &&
+    response.result.updated
+  ) {
+    loadProfile();
+  }
+}
+
+async function changeInstagram() {
+  instagramUploading.value = true;
+  const response = await $api.profile.changeInstagram({
+    instagram: instagram.value
+  });
+  instagramUploading.value = false;
+
+  if (
+    $api.utils.isSuccess(response) &&
+    response.result.updated
+  ) {
+    loadProfile();
+  }
+}
+
+const changeDescriptionThrottle = $ld.throttle(
+  changeDescription,
+  5000,
+  {
+    leading: false
+  }
+);
+
+function init() {
+  description.value =
+    profile.value?.description || description.value;
+  instagram.value = profile.value?.instagram || instagram.value;
+}
+
+onMounted(init);
+watch(profile, init);
+watch(description, changeDescriptionThrottle);
 </script>
 
 <style lang="scss" src="./index.module.scss" module></style>

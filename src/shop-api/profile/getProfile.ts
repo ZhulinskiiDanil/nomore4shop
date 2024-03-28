@@ -12,5 +12,5 @@ export async function getProfile() {
     return response;
   }
 
-  return $api.utils.InvalidResponseError;
+  return $api.utils.InvalidResponseError();
 }
