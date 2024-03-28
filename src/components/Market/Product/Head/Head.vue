@@ -2,7 +2,7 @@
   <div :class="$style.head">
     <div :class="$style.user">
       <div :class="$style.avatar">
-        <img :src="data.author.avatar || ''" alt="Avatar" />
+        <img :src="avatar || ''" alt="Avatar" />
       </div>
       <div :class="$style.username">
         {{ data.author.username }}
@@ -14,7 +14,12 @@
 <script setup lang="ts">
 import type { Product } from '@/ts/market';
 
-defineProps<{ data: Product }>();
+const props = defineProps<{ data: Product }>();
+
+const defaultAvatar = useDefaultAvatar();
+const avatar = computed(
+  () => props?.data?.author?.avatar || defaultAvatar
+);
 </script>
 
 <style lang="scss" src="./Head.module.scss" module></style>
