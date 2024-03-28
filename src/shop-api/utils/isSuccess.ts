@@ -1,6 +1,6 @@
-export function isSuccess(
+export function isSuccess<T>(
   value: unknown
-): value is SuccessResponse {
+): value is SuccessResponse<T> {
   return (
     value instanceof Object &&
     'success' in value &&

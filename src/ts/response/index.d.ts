@@ -6,7 +6,7 @@ type ErrorResponse<
   code: ErrorCodes;
 };
 
-type SuccessResponse<T = null> = {
+type SuccessResponse<T extends unknown = null> = {
   ok: true;
   result: T;
 };
