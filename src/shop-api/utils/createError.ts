@@ -1,12 +1,10 @@
 import { ErrorCodes } from '@/ts/errors';
 
 export function createError(
-  code: ErrorCodes = ErrorCodes.INVALID_RESPONSE,
-  message: string = ''
+  code: ErrorCodes = ErrorCodes.INVALID_RESPONSE
 ): ErrorResponse<ErrorCodes> {
   return {
-    error: true,
-    message,
-    errorCode: code
+    ok: false,
+    code
   };
 }

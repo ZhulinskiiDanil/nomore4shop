@@ -2,7 +2,7 @@
   <div v-if="profile" :class="$style.container">
     <ProfileHead
       title="Ваш профиль"
-      :avatar="profile.avatar"
+      :avatar="avatar"
       :username="`@${profile.username}`"
       :description="
         profile.description || 'Описание пользователя'
@@ -25,7 +25,11 @@
 import { ProductState } from '@/ts/market';
 import type { Product } from '@/ts/market';
 
+const defaultAvatar = useDefaultAvatar();
 const { profile } = useProfile();
+const avatar = computed(
+  () => profile.value?.avatar || defaultAvatar
+);
 const products = computed<Product[]>(() =>
   profile.value
     ? [
