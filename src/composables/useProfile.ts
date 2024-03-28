@@ -26,7 +26,9 @@ export function useProfile(options?: UseProfileOptions) {
       if ($api.utils.isSuccess(profile)) {
         state.value.profile = profile.result;
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   if (options?.prefetch) {

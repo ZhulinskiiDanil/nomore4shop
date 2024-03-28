@@ -47,7 +47,7 @@ export const withValidate = () => {
     error: null as FieldError
   });
   const price = reactive({
-    value: '',
+    value: 0,
     error: null as FieldError
   });
   const size = reactive({
@@ -90,20 +90,22 @@ export const withValidate = () => {
     }
   }));
 
+  const v$ = useVuelidate(rules, {
+    title: toRef(title, 'value'),
+    description: toRef(description, 'value'),
+    price: toRef(price, 'value'),
+    rate: toRef(rate, 'value'),
+    size: toRef(size, 'value')
+  });
+
   return {
-    fields: {
+    state: {
       title,
       description,
       price,
       size,
       rate
     },
-    v$: useVuelidate(rules, {
-      title: toRef(title, 'value'),
-      description: toRef(description, 'value'),
-      price: toRef(price, 'value'),
-      rate: toRef(rate, 'value'),
-      size: toRef(size, 'value')
-    })
+    v$
   };
 };

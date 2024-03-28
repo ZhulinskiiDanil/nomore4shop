@@ -5,30 +5,30 @@
       <MarketEditProductTitle
         v-model="v$.title.$model"
         :error="
-          v$.title.$errors?.[0]?.$message || fields.title.error
+          v$.title.$errors?.[0]?.$message || state.title.error
         "
       />
       <MarketEditProductDescription
         v-model="v$.description.$model"
         :error="
           v$.description.$errors?.[0]?.$message ||
-          fields.description.error
+          state.description.error
         "
       />
       <MarketEditProductPrice
         v-model="v$.price.$model"
         :error="
-          v$.price.$errors?.[0]?.$message || fields.price.error
+          v$.price.$errors?.[0]?.$message || state.price.error
         "
       />
       <MarketEditProductOtherInfo
         v-model:size="v$.size.$model"
         v-model:product-state="productState"
         :size-error="
-          v$.size.$errors?.[0]?.$message || fields.size.error
+          v$.size.$errors?.[0]?.$message || state.size.error
         "
-        :rate="fields.rate.value"
-        @rate="(rate) => (fields.rate.value = rate)"
+        :rate="state.rate.value"
+        @rate="(rate) => (state.rate.value = rate)"
       />
       <MarketEditProductImages v-model="images" />
       <div :class="$style.buttons">
@@ -42,7 +42,7 @@
 import { ProductState } from '@/ts/market';
 import { withValidate } from './model/validate';
 
-const { fields, v$ } = withValidate();
+const { state, v$ } = withValidate();
 const images = reactive<{ id: string; path: string }[]>([]);
 const productState = ref(ProductState.NEW);
 </script>

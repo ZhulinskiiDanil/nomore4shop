@@ -1,17 +1,7 @@
 <template>
   <MarketEditProductRow :class="$style.price" title="Цена (USD)">
     <UIInputWrapper :error="error">
-      <UIInput
-        v-model="model"
-        :data-mask="
-          parseFloat((model || '').match(/\d/g)?.join('') || '')
-            .toLocaleString('ru')
-            .replace(/\d/g, '#')
-            .slice(-7)
-        "
-        placeholder="300$"
-        fill
-      />
+      <UIInput v-model="model" placeholder="300$" fill />
     </UIInputWrapper>
     <div :class="$style.footer">
       <div :class="$style.converted">0 USD ~ 0 UAH</div>
@@ -21,7 +11,20 @@
 </template>
 
 <script setup lang="ts">
-const model = defineModel<string>();
+const model = defineModel<string | number>({
+  get(value) {
+    const numbers = value.toString().match(/\d/g);
+    const parsedValue = parseFloat(
+      numbers ? numbers.join('') : ''
+    );
+
+    if (isNaN(parsedValue) || !parsedValue) {
+      return '';
+    } else {
+      return parsedValue.toLocaleString('ru', {});
+    }
+  }
+});
 defineProps<{ error?: string | null }>();
 </script>
 
