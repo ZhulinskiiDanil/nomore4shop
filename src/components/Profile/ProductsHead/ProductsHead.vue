@@ -1,7 +1,9 @@
 <template>
   <div :class="$style.head">
     <div :class="$style.title">Ваши товары</div>
-    <UIButton uppercase>Добавить</UIButton>
+    <NuxtLink href="/market/publish">
+      <UIButton uppercase>Добавить</UIButton>
+    </NuxtLink>
   </div>
 </template>
 
